@@ -1,0 +1,121 @@
+{
+  "status": "RELEASED",
+  "instrument_version": "1.1",
+  "n_steps": 7,
+  "n_agent_profiles": 3,
+  "n_scored_rows": 17,
+  "n_instrument_items": 12,
+  "reverse_coded_items": [
+    "A2"
+  ],
+  "n_controls": 78,
+  "n_evidence_findings": 18,
+  "n_sources": 15,
+  "n_distinct_iso_clauses_mapped": 17,
+  "control_credit": 0.8,
+  "evidence_grade_counts": {
+    "E1": 3,
+    "E2": 1,
+    "E3": 2,
+    "E5": 1
+  },
+  "n_steps_graded_E1": 3,
+  "n_steps_with_no_direct_measurement": 3,
+  "n_steps_conditional": 6,
+  "profile_scs": {
+    "P1": 1.6667,
+    "P2": 3.0,
+    "P3": 4.6667
+  },
+  "primary_profile_rows": {
+    "S01": {
+      "step": "Specimen reception and accessioning",
+      "profile": "P1",
+      "IARS": 3.4,
+      "SCS": 1.67,
+      "RBI_baseline": 5.67,
+      "band_baseline": "Moderate",
+      "RBI_recommended": 3.33,
+      "band_recommended": "Low",
+      "evidence_grade": "E2"
+    },
+    "S02": {
+      "step": "Centrifugation of primary specimen tubes",
+      "profile": "P1",
+      "IARS": 3.4,
+      "SCS": 1.67,
+      "RBI_baseline": 4.67,
+      "band_baseline": "Moderate",
+      "RBI_recommended": 2.67,
+      "band_recommended": "Low",
+      "evidence_grade": "E1"
+    },
+    "S03": {
+      "step": "Cap removal, decapping and aliquoting",
+      "profile": "P1",
+      "IARS": 4.0,
+      "SCS": 1.67,
+      "RBI_baseline": 6.33,
+      "band_baseline": "Moderate",
+      "RBI_recommended": 3.67,
+      "band_recommended": "Low",
+      "evidence_grade": "E1"
+    },
+    "S04": {
+      "step": "Automated clinical chemistry and haematology analyser operation",
+      "profile": "P1",
+      "IARS": 3.0,
+      "SCS": 1.67,
+      "RBI_baseline": 3.33,
+      "band_baseline": "Low",
+      "RBI_recommended": 1.67,
+      "band_recommended": "Low",
+      "evidence_grade": "E5"
+    },
+    "S05": {
+      "step": "GeneXpert cartridge loading",
+      "profile": "P3",
+      "IARS": 3.6,
+      "SCS": 4.67,
+      "RBI_baseline": 10.27,
+      "band_baseline": "Elevated",
+      "RBI_recommended": 5.6,
+      "band_recommended": "Moderate",
+      "evidence_grade": "E1"
+    },
+    "S06": {
+      "step": "MALDI-TOF target preparation and identification",
+      "profile": "P3",
+      "IARS": 4.0,
+      "SCS": 4.67,
+      "RBI_baseline": 17.73,
+      "band_baseline": "High",
+      "RBI_recommended": 10.27,
+      "band_recommended": "Elevated",
+      "evidence_grade": "E3"
+    },
+    "S07": {
+      "step": "Open-tube and open-plate culture work",
+      "profile": "P3",
+      "IARS": 4.6,
+      "SCS": 4.67,
+      "RBI_baseline": 19.6,
+      "band_baseline": "Very high",
+      "RBI_recommended": 13.07,
+      "band_recommended": "Elevated",
+      "evidence_grade": "E3"
+    }
+  },
+  "max_rbi_baseline": 19.6,
+  "max_rbi_baseline_step": "S07",
+  "mean_rbi_reduction": 4.48,
+  "clia_denominator": {
+    "source": "CMS2026",
+    "labs_registered_total": 301284,
+    "certificate_of_compliance": 15214,
+    "certificate_of_accreditation": 15542,
+    "vintage": "September 2026",
+    "note": "Compliance plus accreditation certificates are the non-waived, moderate- and high-complexity settings where these bench steps occur.",
+    "non_waived_certificates": 30756
+  }
+}

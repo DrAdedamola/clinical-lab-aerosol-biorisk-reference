@@ -1,0 +1,284 @@
+# Procedure-level BRACE scoring instrument
+# Clinical Laboratory Aerosol Biorisk Reference
+# Version: 1.1
+# Status: RELEASED 2026-10-29. Supersedes 1.0, which was withdrawn before deposit.
+# Change from 1.0: item A2 is reverse-coded inside the aggregation. In 1.0 better
+# containment raised the release score. Anchor wording is unchanged, so rating sheets
+# completed against 1.0 anchors remain valid; only the arithmetic changed.
+# License: CC BY 4.0
+
+meta:
+  title: "Procedure-level BRACE scoring instrument for aerosol biorisk in clinical diagnostic laboratories"
+  version: "1.1"
+  lineage: >
+    The instrument applies biorisk assessment, characterization and evaluation (BRACE)
+    reasoning to the level of a single bench step rather than to a laboratory or an agent.
+    The instrument is organised around the three stages of biorisk assessment,
+    characterization and evaluation. Dimension A assesses the biorisk of a step by
+    characterising what the step itself releases; dimension B characterises the
+    consequence that release would carry; dimension C and the separately reported
+    evidence grade evaluate how far that biorisk is controlled and how far the evaluation
+    is supported. No training material of any kind is reproduced, paraphrased or relied
+    on here, and the instrument makes no claim to represent any particular organisation's
+    methodology.
+  design_principle: >
+    A score and its evidence grade are reported together and never combined. A step may
+    carry a high score on weak evidence, or a low score on strong evidence, and the user
+    must be able to see which. Averaging the two would hide exactly the information a
+    frontline laboratory needs.
+  scope: >
+    Routine diagnostic bench steps in laboratories performing moderate- and high-complexity
+    testing. Not for research laboratories, not for high-containment work, not for
+    veterinary or food testing.
+
+# ---------------------------------------------------------------------------
+# DIMENSION A - Inherent aerosol release (the step itself)
+# ---------------------------------------------------------------------------
+dimension_A:
+  name: "Inherent Aerosol Release"
+  code: IARS
+  aggregation: mean
+  reverse_coded_items: ["A2"]
+  aggregation_note: >
+    IARS is the mean of the five items with A2 reverse-coded as (6 - A2). A2 is anchored
+    on containment, so a high raw value is a low-release condition; without the reversal
+    better containment would raise the release score. The reversal is applied inside the
+    aggregation and the published anchor wording is unchanged, so a rating sheet completed
+    against the anchors as written remains valid.
+  range: [1, 5]
+  property_of: step
+  iso35001_clauses: ["6.1.1"]
+  description: >
+    How much respirable material the step is capable of putting into the air, before any
+    control is credited. Scored on the step as performed, not on the worst imaginable failure.
+    Failure modes are captured separately in the conditionality field of each step.
+  items:
+    A1:
+      name: "Energy applied to the specimen"
+      iso35001_clauses: ["6.1.1"]
+      anchors:
+        1: "No energy beyond gravity. Material is carried, placed or read."
+        2: "Low manual energy. Gentle inversion, slow decanting, placing a slide."
+        3: "Moderate energy, or a pressure differential released. Uncapping an evacuated tube, pipetting, streaking a loop, smearing a target plate."
+        4: "High localised energy. Vortexing, forceful pipetting, grinding, flaming a wet loop or slide, plate spreading."
+        5: "Very high mechanical energy. Centrifugation, sonication, homogenisation, high-pressure wash cycles."
+    A2:
+      name: "Containment of the specimen during the step"
+      iso35001_clauses: ["6.1.1", "8.6"]
+      reverse_coded: true
+      note: >
+        REVERSE-CODED. This item is the only one in dimension A whose anchors run in the
+        opposite direction to the dimension: 1 is the worst case for release and 5 the
+        best, because the anchors describe containment rather than exposure. The
+        aggregation therefore scores it as (6 - A2), so that better containment lowers the
+        release score. Record the raw anchor value on the rating form; the instrument
+        reverses it. Scored on the specimen container, not on the room or the cabinet;
+        room and cabinet are controls and belong in dimension C.
+      direction_note: >
+        A higher raw anchor value means MORE containment and therefore LESS release. In
+        every other item of dimension A, a higher value means more release. This item and
+        B2 are the two reverse-coded items in the instrument.
+      anchors:
+        1: "Fully open. Specimen or culture is exposed to room air for the whole step."
+        2: "Mostly open. Opened for transfer then reclosed, or transferred into an open receiving vessel."
+        3: "Mostly closed, with a credible breach mode. Capped tubes inside an unsealed rotor; cap-pierce sampling on an instrument."
+        4: "Closed with one controlled interface. Sealed cartridge after loading; closed-tube sampling with an intact septum."
+        5: "Fully closed throughout. No container is opened, pierced or spun at any point in the step."
+    A3:
+      name: "Volume and concentration of biological material"
+      iso35001_clauses: ["6.1.1"]
+      anchors:
+        1: "Trace material only. A dried slide, a swab in transport medium, a sealed cartridge in a box."
+        2: "Small volume of dilute primary specimen. Serum, plasma, urine, under 10 mL."
+        3: "Larger volume of primary specimen, or a specimen type with high organism burden. Sputum, stool, 10 mL or more of fluid."
+        4: "Enriched or amplified material. Positive blood culture broth, enrichment broth, heavy growth from a primary plate."
+        5: "Pure culture at or near maximum density. A full plate sweep, a colony suspension, a subculture inoculum."
+    A4:
+      name: "Proximity to the operator breathing zone"
+      iso35001_clauses: ["6.1.1", "6.1.2"]
+      anchors:
+        1: "Step occurs with the operator absent or more than two metres away."
+        2: "Operator at the bench but not leaning in. Loading a rack, closing a lid, then stepping back."
+        3: "Operator at arm's length, face away from the point of release."
+        4: "Operator at the bench with face oriented toward the point of release for part of the step."
+        5: "Point of release is within roughly 30 cm of the face for most of the step. Hands raised to eye level, or the operator is reading, smelling or closely inspecting the material."
+    A5:
+      name: "Throughput and repetition"
+      iso35001_clauses: ["6.1.1", "6.1.2"]
+      note: "A small per-event release repeated several hundred times a shift is not a small exposure. Scored per operator per shift."
+      anchors:
+        1: "A few times a month or less."
+        2: "A few times a week."
+        3: "A few times a shift."
+        4: "Tens of times a shift."
+        5: "Hundreds of times a shift, or effectively continuous."
+
+# ---------------------------------------------------------------------------
+# DIMENSION B - Consequence (the agent, not the step)
+# ---------------------------------------------------------------------------
+dimension_B:
+  name: "Scenario Consequence"
+  code: SCS
+  aggregation: mean
+  range: [1, 5]
+  property_of: agent_profile
+  iso35001_clauses: ["6.1.2"]
+  description: >
+    What follows if the aerosol reaches a worker. This is a property of the organism that
+    might be present, not of the step, so it is held as a scenario parameter and the same
+    step is reported against three agent profiles.
+  items:
+    B1:
+      name: "Inhalational infectivity"
+      iso35001_clauses: ["6.1.2"]
+      anchors:
+        1: "Inhalation is not a documented route of infection for this agent."
+        2: "Inhalation possible but rarely documented; large inoculum required."
+        3: "Inhalation or droplet exposure is a documented route; moderate inoculum."
+        4: "Inhalation is an efficient route; small inoculum sufficient."
+        5: "Inhalation is a highly efficient route; very small inoculum sufficient, and laboratory-acquired infection by this route is repeatedly documented."
+    B2:
+      name: "Severity, and the availability of prophylaxis and treatment"
+      iso35001_clauses: ["6.1.2", "7.1.1"]
+      note: >
+        Anchors run in the same direction as the dimension: a high score means a bad
+        outcome that is hard to prevent after exposure. No arithmetic reversal is applied.
+      direction_note: >
+        The anchor text describes availability of prophylaxis, which reads as a protective
+        factor, while the score describes severity, which is a harm. The anchors are
+        written so that the two already point the same way; unlike A2, this item needs no
+        reversal in the aggregation. The pairing is recorded here because the asymmetry
+        between A2 and B2 is what concealed the A2 defect.
+      anchors:
+        1: "Mild or self-limiting, or an effective licensed vaccine is in routine use for laboratory workers."
+        2: "Treatable with a short course; effective post-exposure prophylaxis exists and is well tolerated."
+        3: "Significant illness; post-exposure prophylaxis exists but is prolonged, poorly tolerated, or of uncertain efficacy."
+        4: "Serious or chronic illness; prophylaxis is prolonged and imperfect, or diagnosis after exposure is difficult."
+        5: "Life-threatening, with no reliable post-exposure prophylaxis."
+    B3:
+      name: "Likelihood of unsuspected presence"
+      iso35001_clauses: ["6.1.1", "6.1.2"]
+      note: >
+        The dimension most often left out of procedure risk assessments. A laboratory
+        applies heightened precautions only when it knows what it is holding. The agents
+        that cause laboratory-acquired infection in clinical settings are overwhelmingly
+        those that arrived without warning.
+      anchors:
+        1: "Presence is always known or suspected before the step is performed."
+        2: "Presence is usually flagged by the requisition or the clinical history."
+        3: "Presence is sometimes unflagged; recognition depends on the operator noticing a cue."
+        4: "Presence is often unflagged, and the organism resembles commoner, less hazardous organisms."
+        5: "Presence is routinely unsuspected at the time of the step, and the first clue frequently arrives after the exposure has occurred."
+
+# ---------------------------------------------------------------------------
+# DIMENSION C - Control reliability
+# ---------------------------------------------------------------------------
+dimension_C:
+  name: "Control Reliability"
+  code: CRS
+  aggregation: mean
+  range: [1, 5]
+  property_of: [step, control_state]
+  iso35001_clauses: ["6.1.3", "8.1", "8.3", "8.6", "8.7"]
+  description: >
+    How much the controls in place can be relied on. Scored twice for every step: once for
+    baseline practice as commonly found, and once for the recommended control set. The
+    difference between the two is what the recommendation is worth.
+  items:
+    C1:
+      name: "Engineering control effectiveness for this release mode"
+      iso35001_clauses: ["6.1.3", "8.1"]
+      anchors:
+        1: "No engineering control, or a control that does not address the release mode of this step."
+        2: "Partial or improvised barrier. A splash shield, a bench screen, general room ventilation only."
+        3: "Appropriate containment available but not used for every instance of the step."
+        4: "Appropriate containment used for every instance. Class II BSC, sealed centrifuge buckets, closed instrument pathway."
+        5: "Release is engineered out of the step entirely. Sealed cartridge, closed-tube sampling throughout, no open transfer at any point."
+    C2:
+      name: "Independence from human performance"
+      iso35001_clauses: ["6.1.3", "7.2", "8.6"]
+      note: "A control a tired operator can forget at 2 a.m. is a weaker control than one built into the device."
+      anchors:
+        1: "Control works only if the operator remembers, every time, with no prompt and no check."
+        2: "Control depends on operator judgement, with written procedure but no prompt at the point of use."
+        3: "Control is prompted at the point of use, by a label, a middleware flag or a physical layout that makes the safe path the easy one."
+        4: "Control is default-on; defeating it takes a deliberate act."
+        5: "Control is intrinsic to the device or the consumable. The step cannot physically be done the unsafe way."
+    C3:
+      name: "Verification, certification and validation"
+      iso35001_clauses: ["8.3", "9.1", "9.2"]
+      anchors:
+        1: "No verification that the control works."
+        2: "Informal or visual check only."
+        3: "Documented internal check on a defined schedule."
+        4: "Independent verification to a recognised standard on a defined schedule, with records retained. Annual field certification of the biological safety cabinet is the type case."
+        5: "Independent verification as above, plus continuous or per-use monitoring with an interlock or alarm on failure."
+    C4:
+      name: "Personal protective equipment adequacy for the inhalation route"
+      iso35001_clauses: ["8.7", "7.2"]
+      note: >
+        PPE is the last line and is scored as such. A laboratory coat and gloves protect
+        against contact and splash, not inhalation, and a step scored on inhalation risk
+        earns no credit for them.
+      anchors:
+        1: "No respiratory protection, and none of the PPE in use addresses inhalation."
+        2: "Face and eye protection only. Protects against splash to mucous membranes, not inhalation."
+        3: "Surgical mask or equivalent. Source control and large-droplet protection only."
+        4: "Fit-tested filtering facepiece respirator, used for this step, with a documented respiratory protection programme."
+        5: "Powered air-purifying respirator or equivalent, with a documented programme, used for this step."
+
+# ---------------------------------------------------------------------------
+# COMPOSITION
+# ---------------------------------------------------------------------------
+composition:
+  residual_biorisk_index:
+    code: RBI
+    formula: "RBI = max(1, IARS - CONTROL_CREDIT * (CRS - 1)) * SCS"
+    control_credit: 0.8
+    control_credit_rationale: >
+      Set by the author. A control set at the top of every scale (CRS = 5) reduces the release term
+      by 3.2 points, which can take the highest release score of 5 down to 1.8 but never to
+      zero. No control set is credited with eliminating release, because the evidence base
+      does not support that for any of these steps.
+    range: [1, 25]
+  bands:
+    - {label: "Low",       min: 1.0,  max: 4.0}
+    - {label: "Moderate",  min: 4.01, max: 9.0}
+    - {label: "Elevated",  min: 9.01, max: 14.0}
+    - {label: "High",      min: 14.01, max: 19.0}
+    - {label: "Very high", min: 19.01, max: 25.0}
+  band_rationale: >
+    Set by the author. Cut points are placed so that a step of median release under a
+    median agent profile with median controls lands in Moderate. They are asserted, not
+    derived; sensitivity of the step ordering to them is scheduled for release 2.
+
+# ---------------------------------------------------------------------------
+# EVIDENCE GRADE - reported beside every score, never inside it
+# ---------------------------------------------------------------------------
+evidence_grade:
+  iso35001_clauses: ["6.1.4", "9.1"]
+  levels:
+    E1: "Direct quantitative measurement of aerosol release during this exact step, in a clinical or realistically simulated clinical laboratory setting."
+    E2: "Quantitative measurement of a closely analogous step, or of this step in a non-clinical setting, requiring an inference to transfer."
+    E3: "Epidemiological or incident evidence linking this step to laboratory-acquired infection or to a documented exposure event, without aerosol measurement."
+    E4: "Authoritative guidance or expert consensus only. No measurement and no incident series specific to this step."
+    E5: "No evidence located. The control set rests on analogy and precaution alone."
+  conditionality_flag:
+    description: >
+      Set when the measured evidence splits sharply between the step performed as intended
+      and the step performed with a named failure present. Where this flag is set, the
+      reference reports both states, because a single number would misrepresent both.
+    values: ["none", "failure-conditional", "technique-conditional"]
+
+# ---------------------------------------------------------------------------
+# SCORING RULES
+# ---------------------------------------------------------------------------
+scoring_rules:
+  - "Score the step as actually performed in the laboratory being assessed, not as the procedure manual describes it."
+  - "Score dimension A before looking at dimension C. Crediting the control while judging the release is the commonest error this instrument is designed to prevent."
+  - "Every item takes a whole number from 1 to 5. No half points. If two anchors both fit, take the higher."
+  - "If an item cannot be scored for lack of information, record NA and report the dimension mean over the items that were scored, with the count shown. Do not impute."
+  - "Record the evidence grade for the step from the evidence table, not from the rater's impression."
+  - "Record the source for every item score that departs from the reference score in this document."
+  - "Two raters score independently and reconcile afterwards. A rater who has seen another rater's score has not scored independently."
+  - "Re-score the step, do not adjust the total, when a control changes."

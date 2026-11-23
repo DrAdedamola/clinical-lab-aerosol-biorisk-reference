@@ -1,0 +1,79 @@
+step_id,step_name,control_category,control_number,control
+S01,Specimen reception and accessioning,engineering,1,"A designated receipt station with a non-porous, bunded work surface and a leak-containment tray, so a leaking container is opened inside something."
+S01,Specimen reception and accessioning,engineering,2,"A Class II biological safety cabinet available in the receiving area, with a written trigger for moving a visibly leaking or damaged container into it before opening."
+S01,Specimen reception and accessioning,engineering,3,Local exhaust or a dedicated room for opening containers flagged as high-risk respiratory specimens.
+S01,Specimen reception and accessioning,cabinet_use,1,"Any container found leaking, cracked or with visible external contamination is transferred unopened to a Class II cabinet."
+S01,Specimen reception and accessioning,cabinet_use,2,"The cabinet serving receipt is field-certified on the same schedule, and to the same recognised standard, as the cabinets serving microbiology. The laboratory records which standard and which interval it applies; this reference does not restate them."
+S01,Specimen reception and accessioning,ppe,1,"Gloves and a fluid-resistant laboratory coat, as a minimum, for all container handling."
+S01,Specimen reception and accessioning,ppe,2,Eye and face protection when opening any container with external contamination or evidence of leakage.
+S01,Specimen reception and accessioning,ppe,3,"Respiratory protection is not indicated for routine receipt and is indicated only for the leakage and breakage mode, under the laboratory's respiratory protection programme."
+S01,Specimen reception and accessioning,administrative,1,"A written leaking-specimen procedure posted at the receipt station, not filed in a manual."
+S01,Specimen reception and accessioning,administrative,2,Rejection criteria that allow staff to refuse a container rather than open it.
+S01,Specimen reception and accessioning,administrative,3,"A spill kit within reach of the receipt station, with a documented monthly check."
+S01,Specimen reception and accessioning,administrative,4,"Immediate reporting of every breakage event, whether or not anyone was exposed."
+S02,Centrifugation of primary specimen tubes,engineering,1,"Sealed safety buckets or a sealed rotor, loaded and unloaded inside a Class II biological safety cabinet whenever the specimen may contain an inhalational hazard."
+S02,Centrifugation of primary specimen tubes,engineering,2,Centrifuges with a lid interlock that cannot be opened while the rotor turns.
+S02,Centrifugation of primary specimen tubes,engineering,3,Centrifuge sited away from walkways and from the operator's seated breathing zone.
+S02,Centrifugation of primary specimen tubes,cabinet_use,1,"For any specimen under profile P3, or any specimen flagged for mycobacterial or fungal culture, sealed buckets are opened only inside a certified Class II cabinet."
+S02,Centrifugation of primary specimen tubes,ppe,1,Gloves and fluid-resistant coat. Eye protection when unloading.
+S02,Centrifugation of primary specimen tubes,ppe,2,Respiratory protection is not recommended as a routine control for this step.
+S02,Centrifugation of primary specimen tubes,administrative,1,"A written wait interval after the run before the lid is opened, and a second interval before sealed buckets are opened, so that any generated aerosol has time to settle. The reference deliberately specifies no number: no interval in the located evidence is derived from measurement of a clinical centrifuge, and a figure invented here would acquire false authority. The laboratory sets, records and justifies its own intervals."
+S02,Centrifugation of primary specimen tubes,administrative,2,"Documented inspection of rotors, buckets, gaskets and O-rings on a defined schedule, with records retained."
+S02,Centrifugation of primary specimen tubes,administrative,3,"Tube fill limits and a rule against centrifuging cracked, chipped or visibly damaged tubes."
+S02,Centrifugation of primary specimen tubes,administrative,4,"A written breakage-in-the-centrifuge procedure, including who is told and when the room is re-entered."
+S03,"Cap removal, decapping and aliquoting",engineering,1,"Closed-tube sampling wherever the analyser supports it, which removes the step rather than controlling it."
+S03,"Cap removal, decapping and aliquoting",engineering,2,"Automated decapping enclosed within the instrument, in preference to manual decapping at the bench."
+S03,"Cap removal, decapping and aliquoting",engineering,3,"Where manual decapping is unavoidable for specimens under profile P2 or P3, it is done inside a Class II cabinet."
+S03,"Cap removal, decapping and aliquoting",engineering,4,A splash shield at the decapping position does not control inhalation and is credited only against splash.
+S03,"Cap removal, decapping and aliquoting",cabinet_use,1,"All manual opening of specimens flagged for mycobacterial, fungal or systemic bacterial culture occurs inside a certified Class II cabinet."
+S03,"Cap removal, decapping and aliquoting",ppe,1,"Gloves, fluid-resistant coat, and eye and face protection as the minimum for manual decapping."
+S03,"Cap removal, decapping and aliquoting",administrative,1,"A taught technique: tube held away from the face, stopper covered with absorbent gauze, twisted and lifted rather than pulled or rolled free."
+S03,"Cap removal, decapping and aliquoting",administrative,2,A rule that tubes are allowed to come to rest after centrifugation before being opened.
+S03,"Cap removal, decapping and aliquoting",administrative,3,"Competency assessment on decapping technique at induction and on a defined interval, recorded."
+S04,Automated clinical chemistry and haematology analyser operation,engineering,1,"Closed-tube sampling configured and used, not merely available."
+S04,Automated clinical chemistry and haematology analyser operation,engineering,2,"Manufacturer covers kept closed in normal running, with interlocks intact and not defeated."
+S04,Automated clinical chemistry and haematology analyser operation,engineering,3,Liquid waste plumbed to a closed drain line rather than decanted from a carboy by hand.
+S04,Automated clinical chemistry and haematology analyser operation,engineering,4,Local exhaust or a cabinet for the body-fluid and open-cup workflows.
+S04,Automated clinical chemistry and haematology analyser operation,cabinet_use,1,"Open-cup sampling, manual dilutions and body-fluid preparation performed in a Class II cabinet where the specimen falls under profile P2 or P3."
+S04,Automated clinical chemistry and haematology analyser operation,ppe,1,"Gloves, fluid-resistant coat, and eye and face protection for every operation with a cover open."
+S04,Automated clinical chemistry and haematology analyser operation,administrative,1,"A written jam and short-sample procedure that treats cover-open work as a distinct task with its own controls, rather than as part of running the analyser."
+S04,Automated clinical chemistry and haematology analyser operation,administrative,2,Decontamination of the probe and the surrounding area after every jam involving a pierced or spilled specimen.
+S04,Automated clinical chemistry and haematology analyser operation,administrative,3,Maintenance scheduled and recorded; interlock function verified and recorded.
+S04,Automated clinical chemistry and haematology analyser operation,administrative,4,"Until this row is supported by measurement, the laboratory records that it is operating on precaution rather than evidence. That record is itself an ISO 35001 output."
+S05,GeneXpert cartridge loading,engineering,1,"The closed cartridge is the primary control and is already present. The reference's recommendation is to protect it, not to add to it."
+S05,GeneXpert cartridge loading,engineering,2,"Specimen and reagent mixing, and transfer into the cartridge, performed inside a Class II cabinet where the laboratory has one."
+S05,GeneXpert cartridge loading,engineering,3,Instrument sited so that module doors do not open into a seated breathing zone.
+S05,GeneXpert cartridge loading,cabinet_use,1,"Where a cabinet is available, all open transfer occurs within it. Where a cabinet is not available, the measured evidence supports benchtop loading provided the specified sample reagent contact time is honoured in full. The reference states this deliberately, because withholding it would push laboratories without a cabinet toward doing the step with no guidance at all."
+S05,GeneXpert cartridge loading,ppe,1,Gloves and a fluid-resistant coat for all cartridge work.
+S05,GeneXpert cartridge loading,ppe,2,Eye and face protection for the open transfer.
+S05,GeneXpert cartridge loading,ppe,3,"Respiratory protection where the laboratory's own risk assessment calls for it, under a documented programme."
+S05,GeneXpert cartridge loading,administrative,1,"Sample reagent used exactly as the manufacturer specifies: the correct reagent to sputum ratio, the correct dispensing method, and the full contact time. The reference does not single out one of the three, because the source read for this release does not establish which carries the inactivation."
+S05,GeneXpert cartridge loading,administrative,2,"The reagent step prompted and recorded at the bench rather than left to memory, since all three of its parameters are set by the operator."
+S05,GeneXpert cartridge loading,administrative,3,A rule that a cartridge dropped or shaken after loading is discarded rather than run.
+S05,GeneXpert cartridge loading,administrative,4,Used cartridges handled as infectious waste and never opened.
+S05,GeneXpert cartridge loading,administrative,5,Competency assessment that specifically tests the reagent contact step.
+S06,MALDI-TOF target preparation and identification,engineering,1,"All colony picking, broth transfer and target spotting performed inside a certified Class II biological safety cabinet, with only the sealed or inactivated target plate leaving it."
+S06,MALDI-TOF target preparation and identification,engineering,2,"An inactivation or extraction step, rather than direct smear, for any isolate that has not been ruled out as a biological threat agent."
+S06,MALDI-TOF target preparation and identification,engineering,3,Target plates transported to the instrument in a closed carrier.
+S06,MALDI-TOF target preparation and identification,cabinet_use,1,"Cabinet use is the central recommendation for this step, and it is the one most often absent in practice."
+S06,MALDI-TOF target preparation and identification,cabinet_use,2,"The cabinet is field-certified on a defined schedule with records retained, and is not treated as a shelf when not in use."
+S06,MALDI-TOF target preparation and identification,ppe,1,Gloves and a fluid-resistant coat. Eye and face protection outside the cabinet.
+S06,MALDI-TOF target preparation and identification,ppe,2,"For an isolate that cannot be ruled out under the sentinel protocols, the enhanced practices those protocols specify."
+S06,MALDI-TOF target preparation and identification,administrative,1,"A standing rule that ANY slow-growing blood culture isolate is handled in a cabinet and entered into the rule-out algorithm, irrespective of its Gram stain appearance. This control is deliberately blind to the stain: in three of the four documented events involving this technology the stain appeared as Gram-positive rods or cocci suggesting streptococci, so a stain-triggered rule would not have fired."
+S06,MALDI-TOF target preparation and identification,administrative,2,"A clinical and travel history cue available at the bench, so that an isolate from a patient with a compatible exposure history is escalated even when its laboratory appearance is unremarkable. This is the trigger the investigators themselves recommend, and it does not depend on the organism looking unusual."
+S06,MALDI-TOF target preparation and identification,administrative,3,"A prompt tied to specimen type and growth rate rather than to morphology, placed in middleware or on the worksheet, firing before the isolate reaches the target plate."
+S06,MALDI-TOF target preparation and identification,administrative,4,"An exposure assessment and notification procedure that can be run retrospectively on a work list, because recognition in this step is usually retrospective."
+S06,MALDI-TOF target preparation and identification,administrative,5,Referral to the Laboratory Response Network reference laboratory per the sentinel protocols rather than in-house identification.
+S07,Open-tube and open-plate culture work,engineering,1,A certified Class II biological safety cabinet for all manipulation of sterile-site isolates and all work on an organism that has not been ruled out.
+S07,Open-tube and open-plate culture work,engineering,2,"Disposable loops and a closed electric incinerator in place of an open flame, so that no step requires flaming wet material."
+S07,Open-tube and open-plate culture work,engineering,3,"Bench layout that puts the cabinet where the work naturally happens, rather than across the room from the plate reading bench."
+S07,Open-tube and open-plate culture work,cabinet_use,1,"Cabinet use is the single highest-value control in this reference, carried by the strongest evidence in it."
+S07,Open-tube and open-plate culture work,cabinet_use,2,"Field certification to a recognised standard on a defined schedule, with records retained, and re-certification after any relocation. The laboratory records which standard and which interval it applies."
+S07,Open-tube and open-plate culture work,cabinet_use,3,"No storage on the work surface, grilles kept clear, and a documented airflow check before use."
+S07,Open-tube and open-plate culture work,ppe,1,Gloves and a fluid-resistant coat inside the cabinet.
+S07,Open-tube and open-plate culture work,ppe,2,"Where the sentinel protocols call for enhanced practices on a non-excluded isolate, the respiratory and face protection those protocols specify, under a documented programme."
+S07,Open-tube and open-plate culture work,administrative,1,"A standing prohibition on smelling plates, written down rather than assumed."
+S07,Open-tube and open-plate culture work,administrative,2,A rule that slides are fully air dried before any heat is applied.
+S07,Open-tube and open-plate culture work,administrative,3,"Immunisation offered and recorded for staff who routinely manipulate isolates for which an effective vaccine exists, as part of the worker health programme."
+S07,Open-tube and open-plate culture work,administrative,4,"A documented exposure response pathway with named contacts and a defined prophylaxis window, rehearsed rather than filed."
+S07,Open-tube and open-plate culture work,administrative,5,"Competency assessment on cabinet technique, not only on cabinet awareness."

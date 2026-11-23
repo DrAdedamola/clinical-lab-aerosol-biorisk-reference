@@ -1,0 +1,153 @@
+PROVENANCE LOG - Clinical Laboratory Aerosol Biorisk Reference
+Generated 2026-10-29 by code/01_provenance.py
+
+Every source in evidence/sources.yaml, with the URL it was read from and the date.
+Where a fingerprint is recorded, the file was downloaded and hashed; where it says
+NOT RETRIEVED, the source was read in a browser and the URL is the record.
+
+Note on rediscovery: the CMS laboratory statistics file is published at a stable
+path but its CONTENTS are replaced each month. A reader checking this reference
+after September 2026 will find different numbers at the same URL. The figures used
+here are the September 2026 vintage, recorded in report/stats.json.
+
+------------------------------------------------------------------------------
+ACKELSBERG2020
+  title        : Brucella exposure risk events in 10 clinical laboratories, New York City, USA, 2015 to 2017
+  url          : https://pmc.ncbi.nlm.nih.gov/articles/PMC6989065/
+  access_date  : 2026-10-29
+  vintage      : 2020
+  terms_of_use : Open access via PubMed Central
+  bytes        : 210274 bytes
+  fingerprint  : sha256:a2accb3c7675862ba7c5ef970a0ce3fae8ee843f84862f689f38283d79269a74
+
+ASMBIOSAFETY
+  title        : Interim clinical laboratory guideline for biological safety
+  url          : https://asm.org/guideline/interim-clinical-laboratory-guideline-for-biologic
+  access_date  : 2026-10-29
+  vintage      : 
+  terms_of_use : not stated by publisher
+  bytes        : 34880 bytes
+  fingerprint  : sha256:18fde96f63237519517433c04f951abea6a7f04d694135ed93f8e357637714dc
+
+ASMSENTBRUC2025
+  title        : Sentinel level clinical laboratory guidelines for suspected agents of bioterrorism and emerging infectious diseases: Brucella species
+  url          : https://asm.org/getmedia/ffb17144-8e7c-44b2-942d-9c4b8b557abf/brucella-guidelines_august2025.pdf
+  access_date  : 2026-10-29
+  vintage      : 2025
+  terms_of_use : not stated by publisher
+  bytes        : 740432 bytes
+  fingerprint  : sha256:2b4eebdd6d4b3f53c57d9d52edf894e1f0212f6a56575adf9610ea44aa13d202
+
+ASMSENTINTRO
+  title        : Laboratory Response Network (LRN) sentinel level clinical laboratory protocols
+  url          : https://asm.org/articles/cphmc/laboratory-response-network-lrn-sentinel-level-c
+  access_date  : 2026-10-29
+  vintage      : 
+  terms_of_use : not stated by publisher
+  bytes        : 38894 bytes
+  fingerprint  : sha256:fcdc45d94730ccaf9999e62b104ef88c82ad74dded810bd2ad6b6aeb3f84ea06
+
+BANADA2010
+  title        : Containment of bioaerosol infection risk by the Xpert MTB/RIF assay and its applicability to point-of-care settings
+  url          : https://pmc.ncbi.nlm.nih.gov/articles/PMC2953088/
+  access_date  : 2026-10-29
+  vintage      : 2010
+  terms_of_use : Open access via PubMed Central
+  bytes        : 176833 bytes
+  fingerprint  : sha256:d7c23f4ded81c8b256be5421988eca035ad1857ebab00bff487582b53f002958
+
+BMBL6
+  title        : Biosafety in microbiological and biomedical laboratories, 6th edition
+  url          : https://www.cdc.gov/labs/bmbl/index.html
+  access_date  : 2026-10-29
+  vintage      : 
+  terms_of_use : US Government work, public domain
+  bytes        : 48467 bytes
+  fingerprint  : sha256:853db6fd9fefc33a8c4582dda13e9d688f5eb8d53e5b76b69c9eee42d30054ef
+
+CMS2026
+  title        : CLIA laboratory statistics, September 2026
+  url          : https://www.cms.gov/files/document/laboratory-statistics.pdf
+  access_date  : 2026-10-29
+  vintage      : September 2026
+  terms_of_use : US Government work, public domain
+  bytes        : 615645 bytes
+  fingerprint  : sha256:319079f41afdd57558fdd3441d92967b27d1b2ef7992e44b8409c5e7d2206099
+
+DUBUIS2021
+  title        : Aerosol production during blood and urine pre-analytical processing and handling in a hospital biochemistry clinical laboratory during the COVID-19 pandemic
+  url          : https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8097034/
+  access_date  : 2026-10-29
+  vintage      : 2021
+  terms_of_use : Open access, CC BY
+  bytes        : 129768 bytes
+  fingerprint  : sha256:255692f2de3e88000c48f53b4f777cf5c79bcdf81a275343dfd4e077b122e810
+
+LIU2023
+  title        : Three experimental common high-risk procedures: emission characteristics identification and source intensity estimation in biosafety laboratory
+  url          : https://pmc.ncbi.nlm.nih.gov/articles/PMC10002466/
+  access_date  : 2026-10-29
+  vintage      : 2023
+  terms_of_use : Open access, CC BY
+  bytes        : 205752 bytes
+  fingerprint  : sha256:c6b161d28c25cf175c3178702739416a536ce86f52b44861d3c20d8dba7b8878
+
+MMWR2002MENING
+  title        : Laboratory-acquired meningococcal disease - United States, 2000
+  url          : https://www.cdc.gov/mmwr/preview/mmwrhtml/mm5107a1.htm
+  access_date  : 2026-10-29
+  vintage      : 2002
+  terms_of_use : US Government work, public domain
+  bytes        : 28298 bytes
+  fingerprint  : sha256:49d95a0afd3bea8f51b1b1547ad089b862fae4df4ab0f54e73a25010c431c09b
+
+MMWR2014CALAB
+  title        : Fatal meningococcal disease in a laboratory worker - California, 2012
+  url          : https://www.cdc.gov/mmwr/preview/mmwrhtml/mm6335a2.htm
+  access_date  : 2026-10-29
+  vintage      : 2014
+  terms_of_use : US Government work, public domain
+  bytes        : 44263 bytes
+  fingerprint  : sha256:113103569734b9b28a160923566c47ea789eafc277b2ec13ad9ee6e1198ccbaf
+
+RAVNHOLDT2025
+  title        : A review of accidental aerosol generation in laboratories and laboratory-associated infections
+  url          : https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12415171/
+  access_date  : 2026-10-29
+  vintage      : 2025
+  terms_of_use : Open access
+  bytes        : 198264 bytes
+  fingerprint  : sha256:6224911c8f45b57ca1c3366f51c49fbdc38d363ec07272f799ae69f830593769
+
+SEJVAR2005
+  title        : Assessing the risk of laboratory-acquired meningococcal disease
+  url          : https://pmc.ncbi.nlm.nih.gov/articles/PMC1234112/
+  access_date  : 2026-10-29
+  vintage      : 2005
+  terms_of_use : Open access via PubMed Central
+  bytes        : 151270 bytes
+  fingerprint  : sha256:c62c091ffea3a3031ac5de5cf8c986b861f9a26d69b0b612b222dcc8899cee60
+
+WHOLBM4
+  title        : Laboratory biosafety manual, 4th edition
+  url          : https://www.who.int/publications/i/item/9789240011311
+  access_date  : 2026-10-29
+  vintage      : 2020
+  terms_of_use : CC BY-NC-SA 3.0 IGO
+  bytes        : n/a
+  fingerprint  : NOT RETRIEVED (read in browser; URL is the record)
+
+WHOLBM4BSC
+  title        : Laboratory biosafety manual, 4th edition: biological safety cabinets and other primary containment devices
+  url          : https://www.who.int/publications/i/item/9789240011335
+  access_date  : 2026-10-29
+  vintage      : 2020
+  terms_of_use : CC BY-NC-SA 3.0 IGO
+  bytes        : n/a
+  fingerprint  : NOT RETRIEVED (read in browser; URL is the record)
+
+------------------------------------------------------------------------------
+Sources identified but NOT verified at source, and therefore NOT cited:
+  CUNNINGHAM_PATEL
+  BANADA_METHODS
+  BSC_CERTIFICATION_STANDARD

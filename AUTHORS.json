@@ -1,0 +1,31 @@
+{
+  "project": "Clinical Laboratory Aerosol Biorisk Reference",
+  "authors": [
+    {
+      "order": 1,
+      "name": "Oyekunle Adedamola Oyeniyi",
+      "given_names": "Oyekunle Adedamola",
+      "family_name": "Oyeniyi",
+      "orcid": "0000-0002-1978-6133",
+      "email": "adedamolaoyekunleniyi@gmail.com",
+      "affiliation": "Independent Researcher, Pullman, Washington, USA",
+      "corresponding": true,
+      "credit_roles": [
+        "Conceptualization",
+        "Methodology",
+        "Investigation",
+        "Data curation",
+        "Formal analysis",
+        "Writing - original draft",
+        "Writing - review and editing",
+        "Supervision"
+      ]
+    }
+  ],
+  "second_rater": {
+    "status": "TO BE RECRUITED",
+    "note": "Inter-rater agreement requires a second independent rater. Add their block here, with CRediT role 'Investigation', once recruited. Do not release agreement results without a named second rater."
+  },
+  "github_username": "DrAdedamola",
+  "repository": "clinical-lab-aerosol-biorisk-reference"
+}

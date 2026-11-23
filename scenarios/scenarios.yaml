@@ -1,0 +1,66 @@
+# Scenario vignettes for the inter-rater agreement study.
+# STATUS: SEED SET. Target n = 25. Three drafted here as the template and worked examples.
+#
+# RULE: a vignette contains only what its published source states. Where the source is
+# silent on something the instrument asks about, the vignette says so and the rater
+# records NA. No detail is invented to make a vignette scorable.
+
+meta:
+  target_n: 25
+  drafted_n: 3
+  status: "SEED - the remaining vignettes are drafted during release 4 from the source register"
+  rule: "Only published, openly accessible accounts. No unpublished incidents. No invented detail."
+
+scenarios:
+  SC001:
+    source: "MMWR2002MENING"
+    step_mapped: "S07"
+    agent_profile: "P2"
+    vignette: >
+      A clinical microbiologist works up isolates from sterile sites in a hospital
+      laboratory. Co-workers reported that aspiration of material from blood culture
+      bottles was carried out at the open laboratory bench. A biological safety cabinet
+      was not used routinely for this procedure, and neither eye protection nor a mask
+      was worn. Isolates were manipulated and subplating was performed with an
+      inoculation loop on the open bench. The organism recovered was Neisseria
+      meningitidis from an invasive source. The published account does not state the
+      volume of broth aspirated, the number of isolates handled per shift, or whether a
+      cabinet was available elsewhere in the laboratory.
+    silent_on: ["A3 volume", "A5 throughput", "C1 whether a cabinet existed"]
+
+  SC002:
+    source: "DUBUIS2021"
+    step_mapped: "S02"
+    agent_profile: "P1"
+    vignette: >
+      In a hospital biochemistry laboratory, blood samples were spiked with a model
+      bacterium and put through the laboratory's routine pre-analytical workflow.
+      Centrifugation was performed on capped primary tubes in a closed-cap swing-bucket
+      rotor, using the laboratory's own centrifuge and its normal settings. Air sampling
+      and surface swabbing were carried out during the procedure, with a stated detection
+      limit of 4 CFU per cubic metre. No bacteria were recovered from any air or surface
+      sample. The published account describes the procedure as performed correctly, with
+      tubes intact and containment in place; it does not describe a tube breakage or rotor
+      leak condition. The account does not state the number of tubes spun per shift.
+    silent_on: ["A5 throughput"]
+    rater_note: >
+      The containment configuration is stated in the source and must be scored as present.
+      A rater who scores this scenario as an uncontrolled bench has scored a different
+      scenario from the one the source describes.
+
+  SC003:
+    source: "ACKELSBERG2020"
+    step_mapped: "S06"
+    agent_profile: "P3"
+    vignette: >
+      A clinical laboratory received a blood culture that flagged positive. The isolate
+      was a small Gram-negative coccobacillus. Work-up proceeded on the automated
+      identification and susceptibility platform and on the mass spectrometer before
+      Brucella had been considered or excluded. The published investigation across ten
+      laboratories records that this identification technology was in use during several
+      of the exposure events, and that recommendations following the events included
+      handling slow-growing organisms in a biological safety cabinet and not using the
+      mass spectrometer for identification until biological threat agents had been ruled
+      out. The account does not state how long the isolate was handled on the open bench
+      or how many staff were in the room.
+    silent_on: ["A4 duration at the breathing zone", "A5 throughput", "C4 PPE in use"]

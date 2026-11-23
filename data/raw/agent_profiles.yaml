@@ -1,0 +1,43 @@
+# Agent profiles for dimension B. Scores are properties of the organism, not the step.
+# Every sub-score below was ruled on by the author on 2026-10-29.
+
+profiles:
+  P1:
+    name: "Bloodborne, not inhalational"
+    worked_example: "Hepatitis B virus, hepatitis C virus, HIV in a routine chemistry or haematology specimen"
+    rationale: >
+      The commonest realistic hazard in a general clinical specimen. Transmission is by
+      percutaneous and mucous-membrane exposure. Inhalation is not a documented route, so
+      aerosol-specific controls earn little against this profile, while splash and sharps
+      controls earn a great deal. Included so that the reference does not imply that every
+      bench step needs a cabinet.
+    B1: 1
+    B2: 2
+    B3: 2
+    evidence_refs: ["BMBL6", "WHOLBM4"]
+
+  P2:
+    name: "Droplet and aerosol transmissible, prophylaxis available"
+    worked_example: "Invasive Neisseria meningitidis isolate; respiratory viruses in a primary specimen"
+    rationale: >
+      A hazard that the laboratory often does know about, for which both vaccination and
+      post-exposure chemoprophylaxis exist, but which has repeatedly caused severe and
+      fatal laboratory-acquired infection when isolates were manipulated on the open bench.
+    B1: 4
+    B2: 2
+    B3: 3
+    evidence_refs: ["MMWR2002MENING", "SEJVAR2005", "MMWR2014CALAB", "BMBL6"]
+
+  P3:
+    name: "Low-dose inhalational, routinely unsuspected"
+    worked_example: "Brucella species; Mycobacterium tuberculosis complex; Coccidioides species; Francisella tularensis"
+    rationale: >
+      The profile that drives clinical laboratory exposure investigations. The organism
+      arrives unflagged in a routine blood culture or respiratory specimen, is worked up as
+      an ordinary isolate, and is recognised only after the bench work is finished. This is
+      the profile against which the rule-out and referral logic of the sentinel protocols
+      exists.
+    B1: 5
+    B2: 4
+    B3: 5
+    evidence_refs: ["JCM2019BRUCELLA", "ASMSENTBRUC2025", "BMBL6"]

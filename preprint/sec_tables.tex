@@ -1,0 +1,93 @@
+% ----------------------------------------------------------- Table: steps
+\begin{table}[t]
+\caption{The seven bench steps, with the agent profile reported as primary and the
+evidence grade assigned. Full inclusion and exclusion boundaries for each step are
+released with the data.}
+\label{tab:steps}
+\small
+\begin{tabular}{@{}llcc@{}}
+\toprule
+\textbf{ID} & \textbf{Bench step} & \textbf{Primary} & \textbf{Grade} \\
+\midrule
+S01 & Specimen reception and accessioning & P1 & E2 \\
+S02 & Centrifugation of primary tubes     & P1 & E1 \\
+S03 & Cap removal and aliquoting          & P1 & E1 \\
+S04 & Automated analyser operation        & P1 & E5 \\
+S05 & GeneXpert cartridge loading         & P3 & E1 \\
+S06 & MALDI-TOF target preparation        & P3 & E3 \\
+S07 & Open-tube and open-plate culture work & P3 & E3 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ----------------------------------------------------------- Table: profiles
+\begin{table}[t]
+\caption{Agent profiles for dimension B. Scores are properties of the organism that may be
+present, not of the step, and are therefore held as scenario parameters. $\SCS$ is the mean
+of the three items.}
+\label{tab:profiles}
+\small
+\begin{tabular}{@{}p{0.055\columnwidth}p{0.49\columnwidth}ccc@{}}
+\toprule
+ & \textbf{Profile} & \textbf{B1} & \textbf{B2} & \textbf{B3} \\
+\midrule
+P1 & Bloodborne, not inhalational \newline \emph{(HBV, HCV, HIV in routine specimens)} & 1 & 2 & 2 \\
+P2 & Droplet/aerosol transmissible, prophylaxis available \newline \emph{(invasive \textit{N.~meningitidis})} & 4 & 2 & 3 \\
+P3 & Low-dose inhalational, routinely unsuspected \newline \emph{(\textit{Brucella} spp., \textit{M.~tuberculosis})} & 5 & 4 & 5 \\
+\midrule
+\multicolumn{2}{@{}l}{$\SCS$:\quad P1 $=1.67$\quad P2 $=3.00$\quad P3 $=4.67$} & & & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ----------------------------------------------------------- Table: MAIN (wide)
+\begin{table*}[t]
+\caption{Reference scores for the seven bench steps at their primary agent profile.
+$\IARS$ is the mean of five release items, with A2 reverse-coded; $\SCS$ the mean of three
+consequence items for the profile shown; $\CRS$ the mean of four control items, scored
+separately for baseline practice and for the recommended control set. $\RBI$ follows
+Eq.~\eqref{eq:rbi} with $\kappa=0.8$. Bands: Low $\le 4$, Moderate $\le 9$, Elevated
+$\le 14$, High $\le 19$, Very high $\le 25$. The evidence grade is reported beside each
+score and is never an input to it. Conditionality indicates whether the evidence differs
+materially between the step performed as intended and the step performed with a named
+failure (\textit{f-c}) or technique deviation (\textit{t-c}).}
+\label{tab:main}
+\small
+\begin{tabular}{@{}llcccccccl@{}}
+\toprule
+& & & & \multicolumn{2}{c}{\textbf{Baseline practice}} & \multicolumn{2}{c}{\textbf{Recommended controls}} & & \\
+\cmidrule(lr){5-6}\cmidrule(lr){7-8}
+\textbf{ID} & \textbf{Bench step} & $\IARS$ & $\SCS$ & $\CRS$ & $\RBI$ (band) & $\CRS$ & $\RBI$ (band) & $\Delta$ & \textbf{Evidence} \\
+\midrule
+S07 & Open-tube and open-plate culture work & 4.60 & 4.67 & 1.50 & \textbf{19.60} (Very high) & 3.25 & 13.07 (Elevated) & 6.53 & E3 \\
+S06 & MALDI-TOF target preparation          & 4.00 & 4.67 & 1.25 & \textbf{17.73} (High)      & 3.25 & 10.27 (Elevated) & 7.47 & E3, \textit{t-c} \\
+S05 & GeneXpert cartridge loading           & 3.60 & 4.67 & 2.75 & 10.27 (Elevated)           & 4.00 & 5.60 (Moderate)  & 4.67 & E1, \textit{t-c} \\
+S03 & Cap removal and aliquoting            & 4.00 & 1.67 & 1.25 & 6.33 (Moderate)            & 3.25 & 3.67 (Low)       & 2.67 & E1, \textit{t-c} \\
+S01 & Specimen reception and accessioning   & 3.40 & 1.67 & 1.00 & 5.67 (Moderate)            & 2.75 & 3.33 (Low)       & 2.33 & E2, \textit{f-c} \\
+S02 & Centrifugation of primary tubes       & 3.40 & 1.67 & 1.75 & 4.67 (Moderate)            & 3.25 & 2.67 (Low)       & 2.00 & E1, \textit{f-c} \\
+S04 & Automated analyser operation          & 3.00 & 1.67 & 2.25 & 3.33 (Low)                 & 3.50 & 1.67 (Low)       & 1.67 & \textbf{E5}, \textit{f-c} \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+% ----------------------------------------------------------- Table: evidence
+\begin{table*}[t]
+\caption{The evidence base, step by step. Direction indicates whether the finding supports
+release or harm (positive), found none (negative), or records an absence of evidence
+(gap). Full extracted findings with provenance are released with the data.}
+\label{tab:evidence}
+\small
+\begin{tabular}{@{}llp{0.60\textwidth}l@{}}
+\toprule
+\textbf{Step} & \textbf{Grade} & \textbf{Basis of the grade} & \textbf{Sources} \\
+\midrule
+S07 & E3 & 16 probable laboratory-acquired meningococcal cases, 8 fatal; isolate manipulated outside a cabinet in 15 of 16 laboratories; occupational attack rate $\approx$65$\times$ background; open-bench subplating and blood-culture aspiration among affected workers; $>$200 occupational exposures from open-bench manipulation across 10 laboratories. No aerosol measurement located. & \cite{sejvar2005,mmwr2002,mmwr2014,ackelsberg2020,bmbl6} \\
+S06 & E3 & Identification platform in use during 4 exposure events accounting for 84\% of personnel exposures; in 3 of 4, the Gram stain suggested streptococci rather than the taught cue; no seroconversions where a cabinet was in use. No aerosol measurement located. & \cite{ackelsberg2020,asmbruc2025} \\
+S05 & E1 & Neither sample preparation nor automated cartridge processing produced culturable bioaerosol, against 16 and 325~CFU/m\textsuperscript{3} for acid-fast smear preparation. & \cite{banada2010} \\
+S03 & E1 & No organisms recovered by air or surface sampling during opening of spiked blood tubes behind a plexiglass panel; detection limit 4~CFU/m\textsuperscript{3}. & \cite{dubuis2021} \\
+S02 & E1 & No organisms recovered during centrifugation of spiked blood, closed-cap tubes in a swing-bucket rotor, detection limit 4~CFU/m\textsuperscript{3}. Centrifuge spills appear among studied accident types; measured rupture intensity 10--100~CFU/m\textsuperscript{3}, below that of drops and injection. & \cite{dubuis2021,ravnholdt2025,liu2023} \\
+S01 & E2 & Dropped container produced the highest source intensity of three simulated procedures, $\approx$10\textsuperscript{3}~CFU/m\textsuperscript{3}. Inference required: 30~mL concentrated suspension in a research laboratory, not clinical specimens. & \cite{liu2023,ravnholdt2025} \\
+S04 & \textbf{E5} & No study measuring aerosol release from a clinical chemistry or haematology analyser was located. Automated equipment identified in review as a source requiring characterisation. & \cite{ravnholdt2025} \\
+\bottomrule
+\end{tabular}
+\end{table*}

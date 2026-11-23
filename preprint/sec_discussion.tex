@@ -1,0 +1,225 @@
+\section{Discussion}
+
+\subsection{Why the inversion exists}
+\label{sec:why}
+
+The inversion in Fig.~\ref{fig:inversion} invites a tempting misreading: that measurement
+reveals bench work to be safer than feared, and that the unmeasured steps are
+over-scored by an instrument reflecting folklore. I argue the opposite, on three grounds.
+
+First, the measurement that exists was not allocated by hazard. It was allocated by
+occasion. The pre-analytical measurements were performed during the COVID-19 pandemic, in
+response to acute concern among biochemistry staff about handling specimens from infected
+patients~\cite{dubuis2021}. The cartridge-assay measurement was performed to support
+deployment of a new diagnostic platform into settings lacking containment
+infrastructure~\cite{banada2010}. Neither study was commissioned because the step in
+question was judged the most dangerous in the laboratory. They were commissioned because
+somebody needed an answer about that step at that moment. Microbiology bench work attracted
+no comparable occasion, and so attracted no comparable measurement.
+
+Second, the unmeasured steps are not unevidenced. They are evidenced by a different and
+less tractable method: counting the people who became infected. An occupational attack
+rate roughly sixty-five times background, with a case fatality of eight in
+sixteen~\cite{sejvar2005}, is a strong signal about a procedure. It is simply not a signal
+expressed in CFU/m\textsuperscript{3}, and an evidence framework that recognises only
+aerosol measurement would discard it. This is the reason the grading scale treats incident
+evidence as its own level rather than as missing data.
+
+Third, the direction of the gap is itself informative about where measurement effort has
+value. The steps we have measured turn out to release little; the steps we have not
+measured are those associated with documented infection. If the purpose of measurement is
+to reduce uncertainty where the stakes are highest, the existing allocation is close to
+inverted, and correcting it is inexpensive relative to the question.
+
+\subsection{What a negative result licenses}
+
+The negative pre-analytical findings require careful statement, and an earlier draft of
+this work stated them too strongly.
+
+Both negative results were obtained \emph{with containment in place}. Centrifugation was
+performed with closed-cap tubes in a swing-bucket rotor; tube opening was performed behind
+a plexiglass panel~\cite{dubuis2021}. The finding is therefore evidence that those
+controls work. It is not evidence that the bare open bench is adequate, and a laboratory
+citing this study to justify removing a barrier would be inverting its meaning.
+
+The detection limit compounds this. At 4~CFU/m\textsuperscript{3}, release below that
+threshold would be reported as zero. For an organism with a low inhalational infectious
+dose, a concentration below the detection limit of a culture-based air sampler is not
+necessarily a concentration below the infectious dose. ``Nothing was recovered'' and
+``nothing was released'' are different statements, and only the first is supported.
+
+The same caution applies in the other direction to the quantitative comparison for
+centrifugation. Measured source intensities place centrifugal tube rupture at roughly
+10--100~CFU/m\textsuperscript{3}, \emph{below} the roughly
+10\textsuperscript{3}--10\textsuperscript{4}~CFU/m\textsuperscript{3} measured for dropped
+containers and accidental injection~\cite{liu2023}. An earlier draft of this work implied
+the reverse ranking. The failure-conditional flag on centrifugation is retained, but it
+now rests on the breakage literature and on guidance rather than on a concentration
+ranking the data do not support. That study also used 30~mL of concentrated suspension in
+a research biosafety laboratory rather than clinical specimens, which is why the
+corresponding specimen-reception finding is graded E2 with the inference stated rather
+than E1.
+
+\subsection{The MALDI-TOF failure mode is not the one usually taught}
+
+The most actionable finding in this work concerns the trigger for enhanced precautions.
+
+Conventional teaching holds that a small Gram-negative coccobacillus growing on blood and
+chocolate agar should raise suspicion of a biological threat agent. An earlier version of
+the control set for MALDI-TOF target preparation accordingly recommended a Gram-stain
+prompt firing on that morphology.
+
+The incident data do not support this control. In three of the four exposure events
+involving the identification platform, the initial Gram stain appearance was of
+Gram-positive rods or cocci suggestive of streptococci, not of small Gram-negative
+coccobacilli~\cite{ackelsberg2020}. The staff looked at the Gram stain, and the Gram stain
+misled them. A morphology-triggered prompt would have failed to fire in three of four
+events, and would have delivered a false reassurance precisely where reassurance was most
+costly.
+
+The control set was accordingly rebuilt around a trigger that does not depend on
+morphology: any slow-growing blood culture isolate is handled in a cabinet and entered
+into the rule-out algorithm irrespective of its Gram stain appearance, supplemented by a
+clinical and travel history cue available at the bench, and by a prompt tied to specimen
+type and growth rate rather than to appearance. This aligns with sentinel-laboratory
+guidance that commercial identification systems should not be used for potential select
+agents, and that manipulation of organisms that might be \emph{Brucella} should occur in a
+cabinet under enhanced practices until ruled out and referred~\cite{asmbruc2025}.
+
+That the exposures also concentrate in this step --- four events accounting for 84\% of
+personnel exposures identified across ten
+laboratories~\cite{ackelsberg2020} --- makes the trigger design, rather than the
+containment hardware, the highest-leverage change available in this part of the workflow.
+
+\subsection{Research priorities}
+
+Four measurement studies would resolve most of the uncertainty documented here, in
+descending order of value:
+
+\begin{enumerate}
+\item \textbf{A high-volume automated analyser}, characterising normal running separately
+      from cover-open fault clearance and maintenance. This is the highest-throughput step
+      in the laboratory and is graded E5. A single well-designed study would move it from
+      E5 to E1 and would be directly citable by every non-waived laboratory.
+\item \textbf{Open-bench subculture and plate manipulation}, the step with the strongest
+      incident evidence and no measurement. Measurement here would either corroborate an
+      inference currently resting entirely on epidemiology, or substantially revise it.
+\item \textbf{Failure modes rather than procedures}, for centrifugation and specimen
+      reception. For both steps the risk is concentrated in breakage and leakage, and
+      measuring the intact procedure --- as has been done --- answers the less important
+      question.
+\item \textbf{Decontamination adequacy of instrument internal pathways} after a
+      late-recognised isolate has passed through an automated platform. Retrospective
+      recognition is the norm in clinical laboratories, and the decision to return an
+      instrument to service is currently made with no evidence base.
+\end{enumerate}
+
+\subsection{Relation to ISO 35001:2019}
+
+The instrument is designed to produce the documented outputs that clauses 6.1.1 to 6.1.4
+require, at a resolution the standard does not itself specify. ISO 35001 obliges risk
+assessment but does not prescribe a methodology, matrix dimensionality, or whether
+assessment should be agent-based or activity-based. This reference offers one
+activity-based instantiation, with the clause mapping released so that a laboratory can
+show which requirement each recorded score serves.
+
+One consequence deserves emphasis. For a step graded E5, a laboratory following this
+reference records explicitly that it is operating on precaution rather than evidence.
+That record is itself a legitimate output under clause 6.1.4, and is more defensible than
+a confident score with no provenance.
+
+\subsection{Limitations}
+\label{sec:limitations}
+
+\textbf{These scores are structured expert judgement, not measurement.} The instrument
+makes judgement explicit, decomposed and arguable; it does not make it empirical. A reader
+who disagrees can identify the specific anchor applied and contest it, which is the
+intent, but the figure remains a judgement.
+
+\textbf{Inter-rater agreement has not been measured.} Every score reported here reflects
+one rater's reading of the anchors. A protocol has been registered in advance, specifying
+Gwet's AC2 with ordinal weights as the primary statistic and linearly weighted Cohen's
+kappa as secondary, with analysis code written and self-tested against boundary cases. It
+has not been executed because no second rater has yet been recruited, and reporting an
+agreement coefficient without one would be fabrication. Until it is run, the instrument
+should be regarded as proposed rather than validated.
+
+\textbf{Mixed-direction anchors are a defect generator.} Dimension A contains one
+reverse-coded item among five. In an earlier draft this item was aggregated without
+transformation, so that better containment raised the release score; five of seven steps
+were affected, and the error survived because each anchor reads correctly in isolation.
+The remedy adopted --- an explicit direction note on every reverse-anchored item, and a
+machine-readable declaration of reverse-coded items consumed by the aggregation --- is
+recommended to anyone building a similar instrument. The defect was detected by manual
+verification, not by the automated checks, which is itself a finding about the limits of
+automated quality control.
+
+\textbf{The composition parameters are asserted.} The control credit $\kappa = 0.8$ and the
+band cut points at 4, 9, 14 and 19 are author-set. Sensitivity of the step ordering to
+these values has not been tested.
+
+\textbf{The literature search was targeted, not systematic.} No registered search strategy,
+database list, or screening log was maintained. This release therefore does not claim
+completeness of the evidence base, and a systematic search is the first planned addition.
+
+\textbf{Baseline control scores characterise, they do not estimate.} They describe common
+practice as reported in the literature and guidance. No survey of laboratories was
+conducted, and the baseline for any particular laboratory may differ substantially.
+
+\textbf{Three claims were excluded for want of a primary source}, as described in the
+Methods. Their exclusion makes one control set more cautious than the full evidence may
+warrant, and leaves the cabinet certification standard and interval to be recorded
+locally rather than specified here.
+
+\textbf{Agent profiles are stylised}, and scope is limited to US CLIA moderate- and
+high-complexity practice. The instrument should transfer to other regulatory settings; the
+baseline control scores almost certainly do not.
+
+\section{Conclusion}
+
+Bench biosafety practice in clinical diagnostic laboratories is inverted with respect to
+its evidence base. The steps most often named in requests for containment have been
+measured, with containment in place, and yielded nothing recoverable. The steps associated
+with documented occupational infection and death have never been measured at all. The
+busiest step in the laboratory has no evidence of any kind behind its safety practice.
+
+This inversion is invisible to any instrument that returns a single number. Reporting the
+score and the strength of the evidence beside one another, and refusing to combine them,
+is what makes it legible --- and makes it possible for a laboratory to distinguish the
+controls it maintains because they work from those it maintains because they always have.
+
+The instrument, the reference scores, the extracted evidence with provenance, the control
+sets, and the analysis code are released openly so that each component can be contested on
+its own terms.
+
+\section*{Data and code availability}
+
+All data, the scoring instrument, extracted evidence with source provenance, control sets,
+analysis code, and quality-control reports are openly available at
+\url{https://github.com/DrAdedamola/clinical-lab-aerosol-biorisk-reference} and archived
+with a persistent identifier. The instrument, data and documents are released under
+CC BY 4.0; the code under the MIT licence. ISO 35001:2019 clause numbers and titles are
+reproduced as a structural index only; the standard itself must be obtained from ISO or a
+national member body.
+
+\section*{Competing interests}
+
+The author declares no competing interests.
+
+\section*{Funding}
+
+This work received no funding.
+
+\section*{Use of artificial intelligence}
+
+AI assistance was used for code implementation, data wrangling, literature triage,
+document formatting, and drafting mechanics. All analytic decisions, every score, and
+every citation are the author's, and each citation was checked against its source by the
+author. Three claims that could not be verified at source were excluded, as described in
+the Methods.
+
+\section*{Acknowledgements}
+
+The biorisk assessment, characterization and evaluation approach applied here was learned
+through the Sandia National Laboratories biorisk management workshops delivered for the
+U.S. Defense Threat Reduction Agency. No workshop material is reproduced in this work.

@@ -1,0 +1,244 @@
+\section{Introduction}
+
+Biosafety guidance in the United States and internationally places the obligation to
+assess risk on the individual laboratory. The sixth edition of \emph{Biosafety in
+Microbiological and Biomedical Laboratories} and the fourth edition of the WHO
+\emph{Laboratory Biosafety Manual} both frame risk assessment as a local, procedure-aware
+activity rather than a matter of agent classification alone~\cite{bmbl6,wholbm4}. ISO
+35001:2019 formalises the same expectation as a management-system requirement, obliging
+organisations to identify hazards, assess risk, and mitigate it as a documented
+cycle~\cite{iso35001}.
+
+The obligation is clear. The method is not. A laboratory director who wishes to know
+whether uncapping evacuated tubes at the open bench is acceptable, or whether colony
+picking for mass-spectrometric identification requires a biological safety cabinet, has no
+published instrument that operates at that resolution. Agent-based risk group
+classifications describe organisms, not procedures. Facility-level frameworks describe
+containment levels, not bench steps. The gap between them is where the daily work of a
+diagnostic laboratory actually happens, and it is filled, in practice, by local custom.
+
+The scale of the gap is substantial. The Centers for Medicare \& Medicaid Services record
+301{,}284 laboratories registered under the Clinical Laboratory Improvement Amendments as
+of September 2026, of which 15{,}214 hold a certificate of compliance and 15{,}542 a
+certificate of accreditation~\cite{cms2026}. Those 30{,}756 non-waived settings perform
+the moderate- and high-complexity testing in which the bench steps considered here are
+routine. Each is required to assess its own procedures, and each begins from a blank form.
+
+A second problem compounds the first, and is less often stated. Where procedure-level
+guidance does exist, it rarely distinguishes recommendations grounded in measurement from
+recommendations grounded in precedent. The recent review by Ravnholdt and
+colleagues~\cite{ravnholdt2025} makes this explicit for aerosol-generating procedures,
+observing that while some guidance is informed by empirical data, a significant gap
+remains in the empirical evidence supporting it, and that highly automated laboratory
+equipment in particular has not been characterised. A practitioner reading a control
+recommendation cannot tell whether it rests on an air-sampling study, on a cluster of
+fatal infections, or on tradition. These three warrant very different degrees of
+confidence, and conflating them is not a neutral simplification: it makes the evidence
+base appear uniform when it is not.
+
+This paper addresses both problems with one instrument. I report:
+
+\begin{enumerate}[label=(\roman*)]
+\item an open, procedure-level scoring instrument of twelve anchored items across three
+      dimensions, with an evidence grade reported alongside every score and deliberately
+      never combined into it;
+\item a mapping of every instrument element to ISO 35001:2019 clause numbers and titles,
+      so that a score can be tied to the management-system requirement it serves;
+\item reference scores, with cited evidence and recommended control sets, for seven
+      routine bench steps under three agent profiles; and
+\item an evidence map that makes the strength of the underlying literature visible
+      step by step, including where it is absent.
+\end{enumerate}
+
+\noindent The principal empirical result is an inversion, described in
+Section~\ref{sec:inversion}: the bench steps carrying the highest residual biorisk in this
+reference are those for which no aerosol measurement exists, while the steps most often
+named in requests for containment have been measured and found to release nothing
+detectable. I argue in Section~\ref{sec:why} that this is a property of how the evidence
+base was assembled rather than of the hazards themselves.
+
+\section{Methods}
+
+\subsection{Scope and unit of analysis}
+
+The unit of analysis is the bench step: a bounded sequence of manipulations performed on a
+specimen or isolate, with a defined start and end, that a laboratory would recognise as
+one task. Seven steps were selected to span the routine diagnostic workflow from specimen
+arrival to organism identification (Table~\ref{tab:steps}). Each step carries an explicit
+inclusion and exclusion boundary in the released data, so that a laboratory applying the
+instrument can tell whether its own practice falls inside the step as scored.
+
+Scope is limited to laboratories performing moderate- and high-complexity testing under
+CLIA. Research laboratories, high-containment facilities, and veterinary and food testing
+are out of scope, as are the pre-laboratory phases of collection and transport.
+
+\subsection{Design principle: score and evidence reported separately}
+
+The instrument's governing design choice is that the score for a step and the strength of
+the evidence behind it are reported together and never combined into a single figure.
+
+The rationale is that these two quantities answer different questions. A score answers
+``how much residual biorisk does this step carry?''. An evidence grade answers ``how much
+should you trust that number?''. A step may legitimately carry a high score on weak
+evidence, which is a call for caution and for research; or a low score on strong evidence,
+which is a basis for reallocating resources. Averaging the two conflates a statement about
+the world with a statement about our knowledge of it, and destroys precisely the
+information a frontline laboratory needs in order to decide whether to act now or to
+investigate further. Conventional risk matrices, which return a single cell, cannot
+express this distinction.
+
+\subsection{Dimension A: inherent aerosol release}
+
+Dimension A scores the capacity of the step to put respirable material into the air,
+\emph{before any control is credited}. It comprises five items, each anchored at five
+levels: A1 energy applied to the specimen, A2 containment of the specimen during the
+step, A3 volume and concentration of biological material, A4 proximity to the operator
+breathing zone, and A5 throughput and repetition.
+
+Two features warrant comment. First, A5 is included because a small per-event release
+repeated several hundred times per shift is not a small exposure, and procedure-level
+assessments that score a single instance of a step systematically understate
+high-throughput work. A5 is scored per operator per shift.
+
+Second, A2 is \emph{reverse-coded}. Its anchors run from 1 (fully open; specimen exposed
+to room air throughout) to 5 (fully closed; no container opened, pierced, or spun at any
+point), which is the direction a practitioner naturally reads containment, but the
+opposite of the direction of dimension A as a whole, in which a higher value means more
+release. The instrument therefore applies the transformation $A2' = 6 - A2$ within the
+aggregation while leaving the published anchor wording unchanged, and the item carries an
+explicit direction note. This is recorded here because an earlier draft of this work
+aggregated A2 without the transformation, with the consequence that better containment
+raised the release score; the defect was detected during verification and is discussed in
+Section~\ref{sec:limitations} as a general caution about mixed-direction anchors.
+
+Dimension A is a property of the step. Its mean is the Inherent Aerosol Release Score,
+$\IARS \in [1,5]$.
+
+\subsection{Dimension B: scenario consequence}
+
+Dimension B scores what follows if released material reaches a worker. It comprises three
+items: B1 inhalational infectivity, B2 severity against the availability of prophylaxis
+and treatment (reverse-anchored, so that a high value denotes a bad outcome that is hard
+to prevent after exposure), and B3 likelihood of unsuspected presence.
+
+B3 is the item most often absent from procedure-level risk assessments and, on the
+evidence reviewed here, the one that matters most. A laboratory applies heightened
+precautions only when it knows what it is holding. The organisms that have caused
+laboratory-acquired infection in clinical settings are overwhelmingly those that arrived
+without warning in a routine specimen and were worked up as ordinary
+isolates~\cite{ackelsberg2020,sejvar2005}.
+
+Because dimension B is a property of the organism rather than of the step, it is held as a
+scenario parameter. Three agent profiles are defined and reported side by side rather than
+collapsing to a single assumed organism (Table~\ref{tab:profiles}). Each step is also
+assigned a \emph{primary profile}, being the realistic operating case for that step; where
+a step exists only because a specific hazard is suspected, as with cartridge-based
+tuberculosis testing, only the applicable profile is reported. The mean of the three items
+is the Scenario Consequence Score, $\SCS \in [1,5]$.
+
+\subsection{Dimension C: control reliability}
+
+Dimension C scores how far the controls in place can be relied upon, across four items:
+C1 engineering control effectiveness for the release mode of this specific step, C2
+independence from human performance, C3 verification, certification and validation, and
+C4 personal protective equipment adequacy \emph{for the inhalation route}.
+
+C2 encodes the hierarchy-of-controls intuition in scorable form: a control that works only
+if a tired operator remembers it at the end of a night shift is weaker than one built into
+the consumable. C4 is deliberately strict. A laboratory coat and gloves protect against
+contact and splash, not inhalation, and a step scored on inhalation risk earns no credit
+for them.
+
+Dimension C is scored twice for every step: once for \emph{baseline practice} as commonly
+described in the literature and guidance, and once for the \emph{recommended control set}
+derived in this work. The difference between the two states is what the recommendation is
+worth. The mean is the Control Reliability Score, $\CRS \in [1,5]$, in which a higher value
+denotes more reliable control.
+
+\subsection{Composition}
+
+The three dimensions compose into a Residual Biorisk Index:
+\begin{equation}
+\RBI \;=\; \max\!\bigl(1,\; \IARS - \kappa(\CRS - 1)\bigr)\times \SCS ,
+\label{eq:rbi}
+\end{equation}
+with control credit $\kappa = 0.8$ and $\RBI \in [1,25]$. Bands are drawn at 4, 9, 14 and
+19, giving Low, Moderate, Elevated, High and Very high.
+
+Two properties of Eq.~\eqref{eq:rbi} are intentional. The release term is floored at 1, so
+that no control set is credited with eliminating release entirely; the evidence base
+reviewed here does not support such a claim for any of the seven steps. And a control set
+at the top of every scale ($\CRS = 5$) reduces the release term by $4\kappa = 3.2$ points,
+which can take the maximum release score of 5 down to 1.8 but never to zero.
+
+Both $\kappa$ and the band cut points are set by the author and are asserted rather than
+derived. Sensitivity of the step ordering to these choices has not been tested and is
+identified in Section~\ref{sec:limitations} as a priority for the next release.
+
+\subsection{Evidence grading}
+
+Every step receives an evidence grade on a five-level scale, assigned from the extracted
+evidence rather than from the rater's impression:
+
+\begin{itemize}
+\item[\textbf{E1}] Direct quantitative measurement of aerosol release during this exact
+      step, in a clinical or realistically simulated clinical setting.
+\item[\textbf{E2}] Quantitative measurement of a closely analogous step, or of this step
+      in a non-clinical setting, requiring a stated inference to transfer.
+\item[\textbf{E3}] Epidemiological or incident evidence linking the step to
+      laboratory-acquired infection or documented exposure, without aerosol measurement.
+\item[\textbf{E4}] Authoritative guidance or expert consensus only.
+\item[\textbf{E5}] No evidence located.
+\end{itemize}
+
+A \emph{conditionality flag} is set where the evidence splits sharply between the step
+performed as intended and the step performed with a named failure present
+(\texttt{failure-conditional}), or where it turns on operator technique
+(\texttt{technique-conditional}). Where the flag is set, both states are reported, because
+a single figure would misrepresent both.
+
+\subsection{Mapping to ISO 35001:2019}
+
+Each instrument element and each step is mapped to the ISO 35001:2019 clauses it speaks
+to, using clause numbers and titles only. No requirement text, figure, or definition from
+the standard is reproduced, and no purchase of the standard is required to use this
+reference. Across the instrument and the seven steps, 17 distinct clauses are referenced,
+concentrated in 6.1.1--6.1.4 (hazard identification, risk assessment, risk mitigation,
+performance evaluation), 8.1, 8.3, 8.6 and 8.7 (operational planning, maintenance and
+certification, good microbiological technique, PPE), and 10.2 (incident, nonconformity and
+corrective action).
+
+The mapping is structural. It indicates which requirement an element serves. It is not a
+conformity assessment, and applying the instrument does not make a laboratory conformant.
+
+\subsection{Evidence identification and extraction}
+
+Sources were identified by targeted searching of PubMed Central, open-access journals, and
+the published guidance of CDC, WHO and the American Society for Microbiology, restricted
+to material accessible without payment. Fifteen sources were admitted. For each step, I
+extracted findings bearing on aerosol release or on documented exposure, recording the
+finding, its direction (positive, negative, gap, or control recommendation), and its
+source. Eighteen findings were extracted in total.
+
+Three claims identified during extraction were \emph{excluded} because they could be
+traced only to secondary description and not read at source: a report that direct smear
+with matrix solution alone prevents growth of \emph{Brucella} on a MALDI-TOF target; a
+description of a simulated incorrect-use condition in the cartridge-assay bioaerosol
+study; and the designation and interval of the recognised standard for biological safety
+cabinet field certification. Each is held in a register of pending sources, cited nowhere,
+and its exclusion is noted where it affects a control set. The first exclusion makes the
+MALDI-TOF control set more cautious than the full evidence may warrant; the third is the
+reason this reference requires each laboratory to record the certification standard and
+interval it applies rather than naming one.
+
+\subsection{Reproducibility}
+
+The instrument, step definitions, agent profiles, source register, and extracted evidence
+are held as structured text. Scores are computed by script; no score is entered by hand
+into any table. Every numerical statement in this manuscript is interpolated at build time
+from a single machine-readable statistics file written by the analysis pipeline, so that
+text and data cannot diverge. A quality-control script independently recomputes every
+index from the raw sub-scores, checks referential integrity of every citation and clause
+reference, and verifies that no value has been imputed; it reports 21 passing checks and
+no failures. A publication gate refuses to release while any draft marker, unresolved
+verification tag, or placeholder remains.

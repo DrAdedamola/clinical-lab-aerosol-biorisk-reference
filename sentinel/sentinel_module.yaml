@@ -1,0 +1,103 @@
+# Sentinel laboratory module - SCAFFOLD for release 3 (target September 2027)
+# Status: step definitions and boundaries only. NO SCORES.
+# Scores are deliberately absent: scoring these steps requires reading the current
+# agent-specific ASM/APHL protocols at source, and the author doing that reading.
+# A scaffold with honest gaps is worth more than a scaffold with invented numbers.
+
+meta:
+  module: "Sentinel laboratory rule-out and referral"
+  parent_instrument: "instrument/instrument_v1.yaml"
+  release: 3
+  status: "SCAFFOLD - definitions only, no scores"
+  rationale: >
+    The seven core steps describe routine testing where the organism is unknown and
+    unsuspected. The sentinel steps describe what happens in the minutes after a
+    laboratory realises it may be holding something dangerous. The same instrument
+    applies, but two things change: the agent profile is no longer a hypothetical
+    (it is P3 by definition, because the step exists only when P3 is suspected), and
+    the controls move from routine to enhanced. That shift is what this module measures.
+  what_this_module_adds: >
+    A score for the transition itself. The core reference tells a laboratory how risky
+    its routine bench is. This module tells it how much risk sits in the window between
+    first suspicion and successful referral, which is the window the sentinel protocols
+    exist to close and which no instrument currently measures.
+  agent_profile: "P3 by definition"
+  sources_to_read_at_source:
+    - "ASMSENTBIO2018"
+    - "ASMSENTBRUC2025"
+    - "ASMSENTINTRO"
+    - "BMBL6"
+
+steps:
+  SL01:
+    name: "Recognition and triage of a non-excluded isolate"
+    boundary_in: >
+      The moment a Gram stain, growth pattern or colony morphology raises a biological
+      threat agent as a possibility, through the decision to stop routine work-up, remove
+      the isolate from the open bench and the automated identification queue, and quarantine
+      it pending rule-out.
+    why_it_matters: >
+      The documented failure is not that laboratories perform rule-out badly. It is that
+      the cue is missed and routine work-up continues, so the enhanced controls are never
+      triggered at all. Every control downstream of this step is worth nothing if this step
+      does not fire.
+    expected_evidence_grade: "E3"
+    iso35001_clauses: ["6.1.1", "7.2", "7.3.1", "8.6", "10.2"]
+
+  SL02:
+    name: "Rule-out testing under enhanced practices in a biological safety cabinet"
+    boundary_in: >
+      Performing the minimum test set the applicable agent protocol specifies, inside a
+      certified Class II cabinet under enhanced practices, including the manipulations the
+      protocols themselves identify as hazardous.
+    why_it_matters: >
+      Rule-out testing is deliberately minimal, but it is still open manipulation of an
+      organism that may have a very low inhalational infectious dose, performed by staff who
+      do it rarely and therefore do it without practised technique.
+    expected_evidence_grade: "E3"
+    iso35001_clauses: ["6.1.3", "7.2", "8.1", "8.3", "8.6", "8.7"]
+
+  SL03:
+    name: "Exposure assessment and notification after retrospective recognition"
+    boundary_in: >
+      Reconstructing who handled the isolate and how, from the work list and the bench
+      record, once the organism has been recognised; notifying occupational health and the
+      public health authority; offering and documenting post-exposure prophylaxis.
+    why_it_matters: >
+      In clinical laboratories, recognition is usually retrospective. The exposure has
+      already happened. This step is therefore not a control on release at all; it is a
+      control on consequence, and the instrument should say so rather than pretending the
+      two are the same.
+    expected_evidence_grade: "E3"
+    scoring_note: >
+      This step cannot be scored on release, because it controls consequence rather than
+      release. Release 3 will score it on a separate consequence-mitigation scale rather
+      than force it into an instrument built for release. Deciding that openly, rather
+      than quietly scoring it on the wrong scale, is itself part of the contribution.
+    iso35001_clauses: ["7.1.1", "8.9", "8.9.1", "9.1", "10.2"]
+
+  SL04:
+    name: "Packaging and referral of the isolate to the reference laboratory"
+    boundary_in: >
+      Preparing the isolate for shipment under the applicable dangerous-goods rules,
+      documentation, and handover to the carrier.
+    why_it_matters: >
+      The last open manipulation of the organism, performed under time pressure, by staff
+      whose shipping certification may be the only part of this workflow they practise
+      annually.
+    expected_evidence_grade: "E4"
+    iso35001_clauses: ["8.10", "8.10.1", "7.2", "7.5"]
+
+  SL05:
+    name: "Decontamination of the bench, instruments and cabinet after a recognised exposure"
+    boundary_in: >
+      Decontaminating the open bench, the automated identification and susceptibility
+      instruments the isolate passed through, and the cabinet; waste handling; return to
+      service.
+    why_it_matters: >
+      An isolate recognised late has usually been through an automated instrument. Those
+      instruments have internal pathways no local procedure covers, and the decision to
+      return one to service is made with no evidence base whatever.
+    expected_evidence_grade: "E5"
+    research_priority: 2
+    iso35001_clauses: ["8.3", "8.8", "8.9", "9.1"]

@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+title: "Clinical Laboratory Aerosol Biorisk Reference: a procedure-level BRACE scoring instrument, reference scores and evidence map"
+message: "If you use this instrument or these scores, please cite it."
+type: dataset
+authors:
+  - given-names: "Oyekunle Adedamola"
+    family-names: "Oyeniyi"
+    orcid: "https://orcid.org/0000-0002-1978-6133"
+    affiliation: "Independent Researcher, Pullman, Washington, USA"
+    email: "adedamolaoyekunleniyi@gmail.com"
+version: "1.1"
+date-released: "2026-10-29"
+license: CC-BY-4.0
+repository-code: "https://github.com/DrAdedamola/clinical-lab-aerosol-biorisk-reference"
+keywords:
+  - biorisk management
+  - clinical laboratory
+  - infectious aerosol
+  - laboratory-acquired infection
+  - ISO 35001
+  - biosafety cabinet
+  - evidence grading
+  - sentinel laboratory
+abstract: >-
+  An open, procedure-level scoring instrument applying biorisk assessment,
+  characterization and evaluation reasoning to individual bench steps in routine
+  clinical diagnostic testing, mapped to the clause structure of ISO 35001:2019,
+  together with reference scores, evidence grades and recommended control sets for
+  seven bench steps that can generate infectious aerosols.

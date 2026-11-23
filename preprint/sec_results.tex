@@ -1,0 +1,130 @@
+\section{Results}
+
+\subsection{Reference scores}
+
+Table~\ref{tab:main} reports the seven steps at their primary agent profile. The full set
+of seventeen step-and-profile combinations is released with the data.
+
+Residual biorisk under baseline practice ranges from 3.33 (automated analysers, profile
+P1) to 19.60 (open-tube culture work, profile P3). Two steps fall in the Elevated band or
+above under baseline practice at their primary profile, and both involve open manipulation
+of concentrated growth: MALDI-TOF target preparation at 17.73 (``High'') and open-tube
+culture work at 19.60 (``Very high''). The recommended control sets move every step
+downward, by a mean of 4.48 points across all seventeen combinations, but neither of the
+two highest steps reaches the Low band even with the full recommended set applied: open
+culture work falls to 13.07 and MALDI-TOF preparation to 10.27, both remaining Elevated.
+
+\subsection{The inversion}
+\label{sec:inversion}
+
+The central result is visible in Fig.~\ref{fig:inversion}. Ordering the steps by residual
+biorisk and plotting against evidence grade produces a strong negative relationship
+between how much risk a step carries and how much is known about it.
+
+The two highest-scoring steps are graded E3. For neither has aerosol release been measured
+in a clinical laboratory. Their scores rest on incident investigation: sixteen cases of
+probable laboratory-acquired meningococcal disease, of which eight were fatal, with the
+isolate manipulated outside a biological safety cabinet in fifteen of the sixteen
+laboratories~\cite{sejvar2005}; an estimated attack rate among microbiologists of 13 per
+100{,}000 against 0.2 per 100{,}000 among adults in the general population, an
+occupational rate roughly sixty-five times background~\cite{sejvar2005}; open-bench
+subplating with a loop and open-bench aspiration from blood culture bottles without
+cabinet, eye protection or mask among affected workers~\cite{mmwr2002}; and a fatal case
+in which bench-top manipulation, open-bench plate spreading, and flaming of an
+incompletely dried slide were among the breaches identified~\cite{mmwr2014}. For
+MALDI-TOF target preparation, an investigation of \emph{Brucella} exposure risk events
+across ten clinical laboratories found the identification technology in use during four
+events, and those four accounted for 84\% of all personnel exposures identified across the
+investigation~\cite{ackelsberg2020}.
+
+The three steps graded E1 --- centrifugation, cap removal, and cartridge loading --- carry
+baseline scores of 4.67, 6.33 and 10.27 respectively. The two pre-analytical steps are the
+lowest-scoring in the reference at their primary profile. In both cases the measurement
+was negative: air and surface sampling during centrifugation of spiked blood, and during
+opening of spiked blood tubes, recovered no organisms, with an air sampling detection
+limit of 4~CFU/m\textsuperscript{3}~\cite{dubuis2021}.
+
+The highest-throughput step in the clinical laboratory, operation of automated chemistry
+and haematology analysers, is graded E5. No study measuring aerosol release from such an
+instrument was located. The only directly relevant statement in the literature is the
+observation that automated laboratory equipment constitutes a source requiring
+characterisation, studies having concentrated on manual procedures and
+accidents~\cite{ravnholdt2025}.
+
+\subsection{Where the release comes from}
+
+Fig.~\ref{fig:items} decomposes the scores to the item level and shows that the two
+highest-scoring steps reach their position by different routes.
+
+Open-tube culture work scores at or near maximum on four of five release items: it applies
+high localised energy through plate spreading, forceful streaking and flaming; it is open
+by definition; it handles pure culture at maximum density, the most concentrated material
+a clinical laboratory holds; and it is performed with the face close over the plate. Its
+release profile is uniformly high.
+
+MALDI-TOF target preparation, by contrast, scores low on energy. Smearing and spotting are
+gentle manipulations. It reaches 17.73 through the combination of complete loss of
+containment, enriched material, and close breathing-zone proximity, under the most severe
+consequence profile. The hazard is not in the mass spectrometer; it is in the colony
+handling upstream of it, and in the decision to identify an unrecognised isolate at all.
+
+Centrifugation shows the opposite pattern: the highest energy score in the reference, with
+containment, concentration and proximity all low. This is the structural reason it scores
+as it does, and the reason the measured result was negative.
+
+Panel (b) shows that baseline control reliability is low almost everywhere. Of the seven
+steps, five score 1 on C4, reflecting that respiratory protection is not in routine use
+for any of them; four score 1 on C2, reflecting controls that depend entirely on operator
+memory. Only cartridge loading scores 4 on C1, because the closed cartridge is an
+engineering control the laboratory receives without having to implement it.
+
+\subsection{What the recommended controls are worth}
+
+Fig.~\ref{fig:controls} shows the movement from baseline to recommended state. The
+reductions are largest where baseline control is weakest and the consequence profile most
+severe: open culture work falls 6.53 points and MALDI-TOF preparation 7.47 points, in both
+cases driven principally by moving open manipulation into a certified Class~II cabinet.
+
+This recommendation is supported by the only control-effectiveness observation in the
+extracted evidence: across the \emph{Brucella} exposure events investigated, in those
+events where a cabinet was in use for the manipulations concerned, no seroconversions were
+identified among exposed personnel~\cite{ackelsberg2020}.
+
+Cartridge loading falls 4.67 points, but the recommendation differs in character. The
+closed cartridge is already a strong engineering control, and the measured evidence is
+unusually favourable: neither sample preparation nor automated cartridge processing
+produced any culturable bioaerosol, against 16 and 325~CFU/m\textsuperscript{3} measured
+during preparation of smears for acid-fast microscopy~\cite{banada2010}. The recommended
+set therefore protects the existing control --- correct reagent ratio, correct dispensing,
+and correct contact time --- rather than adding new ones.
+
+For centrifugation, the recommended set is sealed buckets, rotor inspection, and a written
+breakage procedure. Respiratory protection is explicitly \emph{not} recommended, and C4 is
+left at 1 in the recommended state, because it is not the control that addresses this
+step's release mode.
+
+\subsection{Sensitivity to the agent profile}
+
+Fig.~\ref{fig:profiles} reports every step under every applicable profile. The spread is
+wide: specimen reception ranges from 5.67 under P1 to 15.87 under P3, a difference of more
+than two bands, from the same release and control scores. The profile assumption is
+therefore the single largest determinant of where a step lands, which is the reason the
+instrument reports three profiles rather than assuming one.
+
+The practical reading is that the same physical step carries very different residual
+biorisk according to what may be in the specimen, and that a laboratory which cannot
+exclude an unsuspected low-dose inhalational agent is operating, for that step, in the
+P3 column rather than the P1 column.
+
+\subsection{The evidence map}
+
+Across seven steps the grades distribute as: E1 in three, E2 in one, E3 in two, and E5 in
+one. Three of seven steps therefore have no direct quantitative measurement of aerosol
+release. Six of seven carry a conditionality flag, meaning that for all but one step the
+evidence differs materially between the procedure performed as intended and the procedure
+performed with a named failure or a technique deviation.
+
+The single step without a conditionality flag is open-tube culture work. This is
+substantively important: unlike the pre-analytical steps, it does not require a failure in
+order to be hazardous. The documented infections occurred during the step performed as
+intended, on an open bench.

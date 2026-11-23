@@ -1,0 +1,661 @@
+# The seven bench steps. Every score below was ruled on by the author on 2026-10-29.
+# IARS items: A1 energy, A2 containment, A3 volume/concentration, A4 proximity, A5 throughput
+# CRS items:  C1 engineering, C2 independence from human performance, C3 verification, C4 PPE
+
+steps:
+
+  S01:
+    name: "Specimen reception and accessioning"
+    short_name: "Specimen reception"
+    boundary_in: >
+      Opening transport bags and coolers, inspecting primary containers, triaging leaking
+      or broken containers, decanting into racks, barcoding and sorting.
+    boundary_out: >
+      Courier transport itself; packaging for outbound referral, which belongs to the
+      sentinel module.
+    applicable_profiles: ["P1", "P2", "P3"]
+    primary_profile: "P1"
+    primary_profile_note: >
+      Any organism can arrive here, so all three profiles are reported. P1 is marked primary
+      because the great majority of received specimens carry no inhalational hazard, and the
+      reference should not imply otherwise.
+    iars:
+      A1: 2
+      A2: 2
+      A3: 2
+      A4: 4
+      A5: 5
+    iars_rationale:
+      A1: "No energy is applied deliberately. The energy that matters arrives as a dropped or already-leaking container."
+      A2: "Containers are capped in principle. Leakage in transit is a recognised and routine finding, so containment is better described as mostly open."
+      A3: "Primary specimens, mostly small volumes of blood and urine, occasionally sputum and stool."
+      A4: "Performed at a bench with the operator leaning over the container to read labels."
+      A5: "Every specimen the laboratory receives passes through this step."
+    conditionality: "failure-conditional"
+    conditionality_note: >
+      The measured aerosol literature puts dropped and broken containers among the highest
+      release events recorded in a laboratory, while intact handling produces little or
+      nothing. The step's risk is therefore concentrated almost entirely in the breakage
+      and leakage mode, not in the routine mode.
+    evidence_grade: "E2"
+    evidence_grade_note: >
+      Graded E2, raised from E4 during the v1.0 corrections. No study has measured aerosol
+      release during clinical specimen reception as such, which would be E1. There is,
+      however, quantitative measurement of a closely analogous event: Liu et al. measured
+      the aerosol released by dropping a container of concentrated suspension. By the
+      instrument's own ladder that is E2, quantitative measurement of a closely analogous
+      step requiring an inference to transfer, and the inference required here is a large
+      one: 30 mL of concentrated culture dropped in a research biosafety laboratory is not
+      a leaking blood tube in a receiving bay. The step was previously graded E4 while
+      carrying an E2 finding, which contradicted the ladder. Re-graded to E2 on the
+      author's ruling of 2026-10-29, which directed that the drop claim be given its own
+      evidence row, cited to Liu et al., graded E2, with the inference stated.
+    evidence_refs: ["LIU2023", "RAVNHOLDT2025", "BMBL6", "WHOLBM4"]
+    evidence_findings:
+      - finding: >
+          Measured aerosol emission from three simulated high-risk procedures found that
+          dropping a container of bacterial suspension produced the highest source
+          intensity of the three, with a mean culturable concentration of roughly
+          10^3 CFU/m^3, above that produced by spillage.
+        source: "LIU2023"
+        direction: "positive, failure mode"
+        grade: "E2"
+        inference_stated: >
+          E2 and not E1. That study was conducted in a research biosafety laboratory using
+          30 mL of concentrated bacterial suspension, not clinical specimens at clinical
+          volumes and concentrations. Transferring the finding to a dropped blood tube at
+          specimen reception is an inference across both setting and inoculum, and the
+          direction of the inference is toward overestimating clinical release.
+    crs_baseline:
+      C1: 1
+      C2: 1
+      C3: 1
+      C4: 1
+    crs_baseline_note: >
+      Commonly performed at an open bench with gloves and a coat, no cabinet, no spill
+      station at the point of receipt, and no verification of anything.
+    crs_recommended:
+      C1: 3
+      C2: 3
+      C3: 3
+      C4: 2
+    controls:
+      engineering:
+        - "A designated receipt station with a non-porous, bunded work surface and a leak-containment tray, so a leaking container is opened inside something."
+        - "A Class II biological safety cabinet available in the receiving area, with a written trigger for moving a visibly leaking or damaged container into it before opening."
+        - "Local exhaust or a dedicated room for opening containers flagged as high-risk respiratory specimens."
+      cabinet_use:
+        - "Any container found leaking, cracked or with visible external contamination is transferred unopened to a Class II cabinet."
+        - "The cabinet serving receipt is field-certified on the same schedule, and to the same recognised standard, as the cabinets serving microbiology. The laboratory records which standard and which interval it applies; this reference does not restate them."
+      ppe:
+        - "Gloves and a fluid-resistant laboratory coat, as a minimum, for all container handling."
+        - "Eye and face protection when opening any container with external contamination or evidence of leakage."
+        - "Respiratory protection is not indicated for routine receipt and is indicated only for the leakage and breakage mode, under the laboratory's respiratory protection programme."
+      administrative:
+        - "A written leaking-specimen procedure posted at the receipt station, not filed in a manual."
+        - "Rejection criteria that allow staff to refuse a container rather than open it."
+        - "A spill kit within reach of the receipt station, with a documented monthly check."
+        - "Immediate reporting of every breakage event, whether or not anyone was exposed."
+    iso35001_clauses: ["6.1.1", "6.1.2", "8.1", "8.7", "8.8", "8.9", "10.2"]
+
+  S02:
+    name: "Centrifugation of primary specimen tubes"
+    short_name: "Centrifugation"
+    boundary_in: >
+      Loading a centrifuge, balancing, running, and opening the lid and rotor at the end of
+      the run, for capped primary tubes of blood, urine or body fluid.
+    boundary_out: >
+      Centrifugation of open vessels, of cultures, or of concentrated material; cytospin.
+    applicable_profiles: ["P1", "P2", "P3"]
+    primary_profile: "P1"
+    iars:
+      A1: 5
+      A2: 3
+      A3: 2
+      A4: 2
+      A5: 5
+    iars_rationale:
+      A1: "The highest mechanical energy routinely applied to a clinical specimen."
+      A2: "Capped tubes inside an unsealed rotor. Containment is real but has a well described breach mode in tube cracking, under-filled or cross-threaded caps, and rotor leaks."
+      A3: "Small volumes of dilute primary specimen in the routine case."
+      A4: "The operator loads and steps away. Exposure, if any, occurs at the moment the lid is opened."
+      A5: "Continuous through the shift in any chemistry or haematology laboratory."
+    conditionality: "failure-conditional"
+    conditionality_note: >
+      Direct measurement during routine centrifugation of closed-cap tubes in a
+      swing-bucket rotor recovered nothing, down to a detection limit of 4 CFU/m^3. Tube
+      breakage and rotor leakage remain recognised failure modes in the incident record
+      and in guidance, and the measured source intensity for centrifugal tube rupture is
+      real but modest relative to other laboratory accident types. The routine operation
+      under containment is not the hazard; the failure is, and it is a moderate hazard
+      rather than an extreme one. Controls should be aimed at detecting and containing
+      failure, not at the routine run.
+    evidence_grade: "E1"
+    evidence_grade_note: >
+      Graded E1 on direct measurement during pre-analytical centrifugation of blood in a
+      hospital clinical laboratory. The conditionality flag is set because the measurement
+      covers the contained configuration only, and the failure mode is evidenced
+      separately and at a lower grade.
+    evidence_refs: ["DUBUIS2021", "RAVNHOLDT2025", "LIU2023", "BMBL6", "WHOLBM4"]
+    evidence_findings:
+      - finding: >
+          Air and surface sampling during centrifugation of blood spiked with a model
+          bacterium recovered no organisms. The centrifugation was performed with
+          closed-cap tubes in a swing-bucket rotor, and the air sampling method had a
+          detection limit of 4 CFU/m^3.
+        source: "DUBUIS2021"
+        direction: "negative"
+        grade: "E1"
+        containment_conditions: >
+          Closed-cap tubes in a swing-bucket rotor. The negative result is therefore
+          evidence that this containment configuration works, NOT evidence that
+          centrifugation on an uncontained rotor is safe. See LIMITATIONS item 4.
+        detection_limit: "4 CFU/m^3"
+      - finding: >
+          A review of accidental aerosol generation in laboratories includes centrifuge
+          spills among the accident types that have been studied, and centrifuge mishaps
+          appear in the record of incidents associated with laboratory-acquired infection.
+        source: "RAVNHOLDT2025"
+        direction: "positive, failure mode"
+        grade: "E3"
+      - finding: >
+          Measured source intensities for three simulated high-risk procedures place
+          centrifugal tube rupture at roughly 10-100 CFU/m^3, BELOW the roughly
+          10^3-10^4 CFU/m^3 measured for dropped containers and for accidental injection.
+        source: "LIU2023"
+        direction: "positive, failure mode, but lower than other accident types"
+        grade: "E2"
+        correction_note: >
+          Recorded in the direction the source actually reports. An earlier draft of this
+          reference implied that centrifuge failure produces the highest measured aerosol
+          concentrations in the laboratory. It does not. The failure-conditional flag on
+          this step rests on the breakage and leakage literature and on guidance, not on a
+          concentration ranking, because the ranking does not support it.
+    crs_baseline:
+      C1: 2
+      C2: 2
+      C3: 2
+      C4: 1
+    crs_baseline_note: >
+      Typical practice is a benchtop centrifuge with a lid but no sealed buckets, loaded and
+      opened at an open bench, with no post-run wait and no routine rotor inspection.
+    crs_recommended:
+      C1: 4
+      C2: 4
+      C3: 4
+      C4: 1
+    crs_recommended_note: >
+      C4 stays at 1 deliberately. Respiratory protection is not the answer to this step and
+      the reference should not imply that it is. The control that works is sealed buckets.
+    controls:
+      engineering:
+        - "Sealed safety buckets or a sealed rotor, loaded and unloaded inside a Class II biological safety cabinet whenever the specimen may contain an inhalational hazard."
+        - "Centrifuges with a lid interlock that cannot be opened while the rotor turns."
+        - "Centrifuge sited away from walkways and from the operator's seated breathing zone."
+      cabinet_use:
+        - "For any specimen under profile P3, or any specimen flagged for mycobacterial or fungal culture, sealed buckets are opened only inside a certified Class II cabinet."
+      ppe:
+        - "Gloves and fluid-resistant coat. Eye protection when unloading."
+        - "Respiratory protection is not recommended as a routine control for this step."
+      administrative:
+        - "A written wait interval after the run before the lid is opened, and a second interval before sealed buckets are opened, so that any generated aerosol has time to settle. The reference deliberately specifies no number: no interval in the located evidence is derived from measurement of a clinical centrifuge, and a figure invented here would acquire false authority. The laboratory sets, records and justifies its own intervals."
+        - "Documented inspection of rotors, buckets, gaskets and O-rings on a defined schedule, with records retained."
+        - "Tube fill limits and a rule against centrifuging cracked, chipped or visibly damaged tubes."
+        - "A written breakage-in-the-centrifuge procedure, including who is told and when the room is re-entered."
+    iso35001_clauses: ["6.1.1", "6.1.3", "8.1", "8.3", "8.6", "8.9", "10.2"]
+
+  S03:
+    name: "Cap removal, decapping and aliquoting"
+    short_name: "Cap removal"
+    boundary_in: >
+      Manual or automated removal of caps from evacuated primary tubes, pouring or pipetting
+      into secondary tubes and cups, and recapping.
+    boundary_out: >
+      Opening positive blood culture bottles, which is covered under S07.
+    applicable_profiles: ["P1", "P2", "P3"]
+    primary_profile: "P1"
+    iars:
+      A1: 3
+      A2: 1
+      A3: 2
+      A4: 5
+      A5: 5
+    iars_rationale:
+      A1: "Modest manual force, but a pressure differential is released, and the common practice of rolling or flicking a stopper free adds energy at the worst possible moment."
+      A2: "The container is deliberately opened. This is the only step in the reference whose entire purpose is to remove containment."
+      A3: "Dilute primary specimen, small volumes."
+      A4: "Hands are raised to chest or face height and the operator is looking directly at the opening."
+      A5: "Performed on a large fraction of all specimens received."
+    conditionality: "technique-conditional"
+    conditionality_note: >
+      Measured release was nil under controlled removal behind a plexiglass panel, down to
+      a detection limit of 4 CFU/m^3. Release from uncontained opening, from a stopper
+      pulled with a snap, or from a tube still under pressure or still warm from the
+      centrifuge, has not been separately measured and must not be assumed equal.
+    evidence_grade: "E1"
+    evidence_grade_note: >
+      Graded E1 on direct measurement of blood tube opening in a hospital clinical laboratory
+      with a negative result. This is one of the few bench steps in the whole reference where
+      somebody actually measured the thing that laboratories worry about.
+    evidence_refs: ["DUBUIS2021", "BMBL6", "WHOLBM4"]
+    evidence_findings:
+      - finding: >
+          Air and surface sampling during opening of blood sample tubes spiked with a
+          model bacterium recovered no organisms. The tubes were opened behind a
+          plexiglass panel, and the air sampling method had a detection limit of
+          4 CFU/m^3.
+        source: "DUBUIS2021"
+        direction: "negative"
+        grade: "E1"
+        containment_conditions: >
+          Opened behind a plexiglass panel. The negative result is therefore evidence that
+          opening behind a barrier works, NOT evidence that uncontained bench-top
+          decapping is safe. The distinction matters because the uncontained case is the
+          one most laboratories actually perform. See LIMITATIONS item 4.
+        detection_limit: "4 CFU/m^3"
+    crs_baseline:
+      C1: 1
+      C2: 1
+      C3: 1
+      C4: 2
+    crs_recommended:
+      C1: 4
+      C2: 4
+      C3: 3
+      C4: 2
+    controls:
+      engineering:
+        - "Closed-tube sampling wherever the analyser supports it, which removes the step rather than controlling it."
+        - "Automated decapping enclosed within the instrument, in preference to manual decapping at the bench."
+        - "Where manual decapping is unavoidable for specimens under profile P2 or P3, it is done inside a Class II cabinet."
+        - "A splash shield at the decapping position does not control inhalation and is credited only against splash."
+      cabinet_use:
+        - "All manual opening of specimens flagged for mycobacterial, fungal or systemic bacterial culture occurs inside a certified Class II cabinet."
+      ppe:
+        - "Gloves, fluid-resistant coat, and eye and face protection as the minimum for manual decapping."
+      administrative:
+        - "A taught technique: tube held away from the face, stopper covered with absorbent gauze, twisted and lifted rather than pulled or rolled free."
+        - "A rule that tubes are allowed to come to rest after centrifugation before being opened."
+        - "Competency assessment on decapping technique at induction and on a defined interval, recorded."
+    iso35001_clauses: ["6.1.1", "6.1.3", "7.2", "7.3.1", "8.1", "8.6", "8.7"]
+
+  S04:
+    name: "Automated clinical chemistry and haematology analyser operation"
+    short_name: "Automated analysers"
+    boundary_in: >
+      Loading racks, cap-pierce and probe sampling, on-board mixing and washing, body-fluid
+      modes, clearing probe jams and short samples, emptying liquid waste, and daily
+      maintenance with the covers open.
+    boundary_out: >
+      Instrument manufacture and installation; molecular analysers, covered under S05.
+    applicable_profiles: ["P1", "P2", "P3"]
+    primary_profile: "P1"
+    iars:
+      A1: 3
+      A2: 3
+      A3: 2
+      A4: 2
+      A5: 5
+    iars_rationale:
+      A1: "Probe aspiration and dispensing, cap piercing, on-board mixing and high-pressure wash cycles, all applied repeatedly."
+      A2: "Closed in normal running, with the interface at the pierced septum and at the waste line. Covers are opened for jams and maintenance."
+      A3: "Dilute primary specimen in small volumes."
+      A4: "The operator loads and walks away. Proximity rises sharply during jam clearance and maintenance."
+      A5: "Effectively continuous."
+    conditionality: "failure-conditional"
+    conditionality_note: >
+      Normal running and fault clearance are different steps wearing the same name. Almost
+      everything that would put material into the air on an automated analyser happens when
+      a cover is open and a person is reaching inside.
+    evidence_grade: "E5"
+    evidence_grade_note: >
+      Graded E5, and this is the most important gap the reference documents. No located study
+      has measured aerosol release from a routine clinical chemistry or haematology analyser.
+      A recent review of accidental laboratory aerosol generation names highly automated
+      equipment as an area needing characterisation. The highest-throughput step in the
+      entire clinical laboratory is governed by no measurement at all.
+    evidence_refs: ["RAVNHOLDT2025", "BMBL6", "WHOLBM4"]
+    evidence_findings:
+      - finding: "A review of measured laboratory aerosol generation identifies automated laboratory equipment as a source requiring characterisation, noting that studies have concentrated on manual procedures and accidents."
+        source: "RAVNHOLDT2025"
+        direction: "gap"
+    research_priority: 1
+    research_priority_note: >
+      Highest research priority in the reference. Highest throughput, lowest evidence. A
+      single well designed measurement study on one high-volume analyser would move this row
+      from E5 to E1 and would be citable by every clinical laboratory in the country.
+    crs_baseline:
+      C1: 3
+      C2: 3
+      C3: 2
+      C4: 1
+    crs_recommended:
+      C1: 4
+      C2: 4
+      C3: 4
+      C4: 2
+    controls:
+      engineering:
+        - "Closed-tube sampling configured and used, not merely available."
+        - "Manufacturer covers kept closed in normal running, with interlocks intact and not defeated."
+        - "Liquid waste plumbed to a closed drain line rather than decanted from a carboy by hand."
+        - "Local exhaust or a cabinet for the body-fluid and open-cup workflows."
+      cabinet_use:
+        - "Open-cup sampling, manual dilutions and body-fluid preparation performed in a Class II cabinet where the specimen falls under profile P2 or P3."
+      ppe:
+        - "Gloves, fluid-resistant coat, and eye and face protection for every operation with a cover open."
+      administrative:
+        - "A written jam and short-sample procedure that treats cover-open work as a distinct task with its own controls, rather than as part of running the analyser."
+        - "Decontamination of the probe and the surrounding area after every jam involving a pierced or spilled specimen."
+        - "Maintenance scheduled and recorded; interlock function verified and recorded."
+        - "Until this row is supported by measurement, the laboratory records that it is operating on precaution rather than evidence. That record is itself an ISO 35001 output."
+    iso35001_clauses: ["6.1.1", "6.1.3", "6.1.4", "8.1", "8.3", "8.8", "9.1"]
+
+  S05:
+    name: "GeneXpert cartridge loading"
+    short_name: "GeneXpert loading"
+    boundary_in: >
+      Adding sample reagent to sputum or another primary specimen, the required incubation,
+      transferring the treated specimen into the cartridge chamber, closing the lid, loading
+      the module, and disposing of the used cartridge.
+    boundary_out: >
+      Instrument maintenance; specimen collection.
+    applicable_profiles: ["P3"]
+    primary_profile: "P3"
+    primary_profile_note: >
+      Reported against P3 only. The step exists because tuberculosis is suspected, so a
+      profile in which inhalation does not matter has no meaning here.
+    iars:
+      A1: 2
+      A2: 2
+      A3: 4
+      A4: 5
+      A5: 3
+    iars_rationale:
+      A1: "Pipetting of a viscous treated specimen. Low energy, but transfer energy nonetheless."
+      A2: "An open transfer into an open chamber, closed immediately afterwards and closed for the rest of the assay."
+      A3: "Sputum from a patient with suspected pulmonary tuberculosis, with a potentially high organism burden."
+      A4: "The transfer is performed with the hands up and the operator looking into the cartridge."
+      A5: "A few to a few tens of cartridges per shift in most settings."
+    conditionality: "technique-conditional"
+    conditionality_note: >
+      The measured evidence was obtained with the sample reagent used as specified. The
+      precise variable that carries the inactivation, and how far performance degrades
+      when the reagent is used incorrectly, is not established from the source read for
+      this release; the manufacturer specifies a reagent to sputum ratio, a dispensing
+      method and a contact time, and the reference treats all three as part of correct
+      use rather than singling one out.
+    evidence_grade: "E1"
+    evidence_grade_note: >
+      Graded E1 on direct measurement of viable bioaerosol production during sample
+      preparation and automated cartridge processing, with a measured comparator in smear
+      preparation. The grade rests on that comparison alone; the withdrawn incorrect-use
+      row contributes nothing to it.
+    evidence_refs: ["BANADA2010", "WHOLBM4", "BMBL6"]
+    evidence_findings:
+      - finding: >
+          Viable bioaerosol was measured during each stage of the assay workflow. Neither
+          sample preparation nor automated cartridge processing produced any culturable
+          bioaerosols, against measured concentrations of 16 CFU/m^3 and 325 CFU/m^3
+          generated during preparation of smears for acid-fast microscopy. Benchtop use
+          of the assay limits infection risk to the user.
+        source: "BANADA2010"
+        direction: "negative"
+        grade: "E1"
+    crs_baseline:
+      C1: 4
+      C2: 3
+      C3: 2
+      C4: 2
+    crs_baseline_note: >
+      The cartridge itself is a strong engineering control that the laboratory gets for free.
+      What varies is whether the reagent contact time is honoured and whether anyone checks.
+    crs_recommended:
+      C1: 5
+      C2: 4
+      C3: 4
+      C4: 3
+    controls:
+      engineering:
+        - "The closed cartridge is the primary control and is already present. The reference's recommendation is to protect it, not to add to it."
+        - "Specimen and reagent mixing, and transfer into the cartridge, performed inside a Class II cabinet where the laboratory has one."
+        - "Instrument sited so that module doors do not open into a seated breathing zone."
+      cabinet_use:
+        - "Where a cabinet is available, all open transfer occurs within it. Where a cabinet is not available, the measured evidence supports benchtop loading provided the specified sample reagent contact time is honoured in full. The reference states this deliberately, because withholding it would push laboratories without a cabinet toward doing the step with no guidance at all."
+      ppe:
+        - "Gloves and a fluid-resistant coat for all cartridge work."
+        - "Eye and face protection for the open transfer."
+        - "Respiratory protection where the laboratory's own risk assessment calls for it, under a documented programme."
+      administrative:
+        - "Sample reagent used exactly as the manufacturer specifies: the correct reagent to sputum ratio, the correct dispensing method, and the full contact time. The reference does not single out one of the three, because the source read for this release does not establish which carries the inactivation."
+        - "The reagent step prompted and recorded at the bench rather than left to memory, since all three of its parameters are set by the operator."
+        - "A rule that a cartridge dropped or shaken after loading is discarded rather than run."
+        - "Used cartridges handled as infectious waste and never opened."
+        - "Competency assessment that specifically tests the reagent contact step."
+    iso35001_clauses: ["6.1.1", "6.1.3", "7.2", "7.3.1", "8.1", "8.6", "8.8"]
+
+  S06:
+    name: "MALDI-TOF target preparation and identification"
+    short_name: "MALDI-TOF identification"
+    boundary_in: >
+      Picking colonies from a plate or transferring from positive blood culture broth,
+      smearing or extracting onto the target plate, applying matrix, loading the plate into
+      the instrument, and cleaning and reusing target plates.
+    boundary_out: >
+      The primary culture work that produced the colony, which is S07.
+    applicable_profiles: ["P2", "P3"]
+    primary_profile: "P3"
+    iars:
+      A1: 2
+      A2: 1
+      A3: 4
+      A4: 5
+      A5: 4
+    iars_rationale:
+      A1: "Low mechanical energy. Smearing, spotting and pipetting."
+      A2: "A target plate is an open surface by design, and colony picking is open work."
+      A3: "Pure growth or enriched broth. Among the most concentrated material a clinical laboratory handles."
+      A4: "The operator works close in with good lighting, often with a magnifier, face over the plate."
+      A5: "Tens of isolates per shift in a busy laboratory."
+    conditionality: "technique-conditional"
+    conditionality_note: >
+      The hazard in this step is almost entirely upstream of the instrument. Reported
+      exposure events cluster around colony handling and around the decision to identify
+      an unrecognised slow-growing organism on the open bench, not around the mass
+      spectrometer itself. The reference should not let a laboratory read a reassuring
+      figure for the instrument and conclude that the step is safe.
+    evidence_grade: "E3"
+    evidence_grade_note: >
+      Graded E3 on an incident series across ten clinical laboratories in which this
+      technology featured in four exposure events accounting for 84 percent of identified
+      personnel exposures. No measurement of aerosol release during target preparation has
+      been located.
+    evidence_refs: ["ACKELSBERG2020", "ASMSENTBRUC2025", "BMBL6"]
+    evidence_findings:
+      - finding: >
+          In an investigation of Brucella exposure risk events across ten clinical
+          laboratories, this identification technology was in use during four of the
+          events, and those four events accounted for 84 percent of all personnel
+          exposures identified across the investigation.
+        source: "ACKELSBERG2020"
+        direction: "positive, incident evidence"
+        grade: "E3"
+      - finding: >
+          In three of the four events involving this technology, the initial Gram stain
+          appearance was of Gram-positive rods or cocci suggestive of streptococci, rather
+          than the small Gram-negative coccobacilli conventionally taught as the cue for
+          a possible biological threat agent.
+        source: "ACKELSBERG2020"
+        direction: "positive, defines the real failure mode"
+        grade: "E3"
+        significance: >
+          This finding overturns the failure mode asserted in earlier drafts of this
+          reference. The failure was not that staff neglected to look at the Gram stain.
+          Staff did look, and the stain misled them. Any control that depends on a
+          Gram-stain cue would have failed to fire in three of these four events, which
+          is why the administrative controls for this step were rebuilt around the
+          specimen type and the growth rate instead.
+      - finding: >
+          In the events in which a biological safety cabinet was in use for the
+          manipulations concerned, no seroconversions were identified among the exposed
+          personnel.
+        source: "ACKELSBERG2020"
+        direction: "negative, control effectiveness"
+        grade: "E3"
+      - finding: >
+          Guidance states that commercial identification systems, including this one,
+          should not be used for identification of potential select agents, and that
+          manipulation of organisms that might be Brucella should occur in a cabinet under
+          enhanced practices until ruled out and referred.
+        source: "ASMSENTBRUC2025"
+        direction: "control recommendation"
+        grade: "E4"
+    crs_baseline:
+      C1: 1
+      C2: 1
+      C3: 2
+      C4: 1
+    crs_baseline_note: >
+      Commonly performed at an open bench, because the instrument is clean-side equipment and
+      the bench beside it inherits that framing.
+    crs_recommended:
+      C1: 4
+      C2: 3
+      C3: 4
+      C4: 2
+    controls:
+      engineering:
+        - "All colony picking, broth transfer and target spotting performed inside a certified Class II biological safety cabinet, with only the sealed or inactivated target plate leaving it."
+        - "An inactivation or extraction step, rather than direct smear, for any isolate that has not been ruled out as a biological threat agent."
+        - "Target plates transported to the instrument in a closed carrier."
+      cabinet_use:
+        - "Cabinet use is the central recommendation for this step, and it is the one most often absent in practice."
+        - "The cabinet is field-certified on a defined schedule with records retained, and is not treated as a shelf when not in use."
+      ppe:
+        - "Gloves and a fluid-resistant coat. Eye and face protection outside the cabinet."
+        - "For an isolate that cannot be ruled out under the sentinel protocols, the enhanced practices those protocols specify."
+      administrative:
+        - "A standing rule that ANY slow-growing blood culture isolate is handled in a cabinet and entered into the rule-out algorithm, irrespective of its Gram stain appearance. This control is deliberately blind to the stain: in three of the four documented events involving this technology the stain appeared as Gram-positive rods or cocci suggesting streptococci, so a stain-triggered rule would not have fired."
+        - "A clinical and travel history cue available at the bench, so that an isolate from a patient with a compatible exposure history is escalated even when its laboratory appearance is unremarkable. This is the trigger the investigators themselves recommend, and it does not depend on the organism looking unusual."
+        - "A prompt tied to specimen type and growth rate rather than to morphology, placed in middleware or on the worksheet, firing before the isolate reaches the target plate."
+        - "An exposure assessment and notification procedure that can be run retrospectively on a work list, because recognition in this step is usually retrospective."
+        - "Referral to the Laboratory Response Network reference laboratory per the sentinel protocols rather than in-house identification."
+    iso35001_clauses: ["6.1.1", "6.1.3", "7.2", "7.3.1", "8.1", "8.3", "8.6", "8.10", "10.2"]
+
+  S07:
+    name: "Open-tube and open-plate culture work"
+    short_name: "Open culture work"
+    boundary_in: >
+      Subculture, plate streaking and spreading, colony picking, preparing suspensions,
+      opening positive blood culture bottles, loop and needle work, flaming, slide
+      preparation from culture, and inspecting or smelling plates.
+    boundary_out: >
+      Identification on the mass spectrometer, which is S06; automated susceptibility
+      instrument loading.
+    applicable_profiles: ["P2", "P3"]
+    primary_profile: "P3"
+    iars:
+      A1: 4
+      A2: 1
+      A3: 5
+      A4: 5
+      A5: 4
+    iars_rationale:
+      A1: "Plate spreading, forceful streaking, flaming a loop or a slide that is not dry, and vortexing suspensions are all high localised energy applied to concentrated growth."
+      A2: "Open by definition."
+      A3: "Pure culture at maximum density. Nothing else in the clinical laboratory is this concentrated."
+      A4: "Close work, face over the plate, and in some laboratories still a deliberate sniff."
+      A5: "Tens of manipulations per shift for a bench microbiologist."
+    conditionality: "none"
+    conditionality_note: >
+      Unlike the pre-analytical steps, this one does not need a failure to be hazardous. The
+      documented infections occurred during the step performed as intended, on an open bench.
+    evidence_grade: "E3"
+    evidence_grade_note: >
+      Graded E3, and it is the strongest incident evidence in the reference. Sixteen
+      probable laboratory-acquired meningococcal cases were identified, eight of them
+      fatal, with the isolate manipulated outside a cabinet in fifteen of the sixteen
+      laboratories, at an estimated 13 cases per 100,000 microbiologists against 0.2 per
+      100,000 in the general adult population. A separate investigation attributes more
+      than 200 occupational exposures to open-bench isolate manipulation. No aerosol
+      measurement of routine subculture in a clinical laboratory has been located, which
+      is why this is E3 and not E1.
+    evidence_refs: ["MMWR2002MENING", "SEJVAR2005", "MMWR2014CALAB", "ACKELSBERG2020", "BMBL6", "ASMBIOSAFETY"]
+    evidence_findings:
+      - finding: >
+          In an investigation of laboratory-acquired meningococcal disease, nearly all
+          affected microbiologists had manipulated isolates and performed subplating with
+          a loop on an open bench, and aspiration from blood culture bottles was performed
+          at the open bench without a cabinet, eye protection or a mask.
+        source: "MMWR2002MENING"
+        direction: "positive, incident evidence"
+        grade: "E3"
+      - finding: >
+          Sixteen cases of probable laboratory-acquired meningococcal disease were
+          identified, of which eight were fatal. In fifteen of the sixteen laboratories,
+          the isolate had been manipulated outside a biological safety cabinet.
+        source: "SEJVAR2005"
+        direction: "positive, incident evidence"
+        grade: "E3"
+      - finding: >
+          The estimated attack rate among microbiologists was 13 cases per 100,000
+          microbiologists, against 0.2 cases per 100,000 among adults in the general
+          population: an occupational rate roughly sixty-five times the background rate.
+        source: "SEJVAR2005"
+        direction: "positive, risk estimate"
+        grade: "E3"
+      - finding: >
+          Exposure to droplets or aerosols during manipulation of invasive isolates on an
+          open bench top was concluded to be the most likely risk factor.
+        source: "SEJVAR2005"
+        direction: "positive, mechanism"
+        grade: "E3"
+      - finding: >
+          In a fatal laboratory-acquired case, the investigation identified multiple
+          breaches, among them manipulation of isolates on the open bench, plate spreading
+          on the open bench, and flaming a slide that had not fully air dried.
+        source: "MMWR2014CALAB"
+        direction: "positive, incident evidence"
+        grade: "E3"
+      - finding: >
+          Across the Brucella exposure risk events investigated in ten clinical
+          laboratories, open-bench manipulation of isolates gave rise to more than 200
+          occupational exposures requiring assessment and follow-up.
+        source: "ACKELSBERG2020"
+        direction: "positive, incident evidence"
+        grade: "E3"
+      - finding: >
+          Guidance records clinical laboratory cases arising from smelling bacteriological
+          cultures and from working on open bench tops.
+        source: "BMBL6"
+        direction: "positive, guidance citing cases"
+        grade: "E4"
+    crs_baseline:
+      C1: 2
+      C2: 1
+      C3: 2
+      C4: 1
+    crs_recommended:
+      C1: 4
+      C2: 3
+      C3: 4
+      C4: 2
+    controls:
+      engineering:
+        - "A certified Class II biological safety cabinet for all manipulation of sterile-site isolates and all work on an organism that has not been ruled out."
+        - "Disposable loops and a closed electric incinerator in place of an open flame, so that no step requires flaming wet material."
+        - "Bench layout that puts the cabinet where the work naturally happens, rather than across the room from the plate reading bench."
+      cabinet_use:
+        - "Cabinet use is the single highest-value control in this reference, carried by the strongest evidence in it."
+        - "Field certification to a recognised standard on a defined schedule, with records retained, and re-certification after any relocation. The laboratory records which standard and which interval it applies."
+        - "No storage on the work surface, grilles kept clear, and a documented airflow check before use."
+      ppe:
+        - "Gloves and a fluid-resistant coat inside the cabinet."
+        - "Where the sentinel protocols call for enhanced practices on a non-excluded isolate, the respiratory and face protection those protocols specify, under a documented programme."
+      administrative:
+        - "A standing prohibition on smelling plates, written down rather than assumed."
+        - "A rule that slides are fully air dried before any heat is applied."
+        - "Immunisation offered and recorded for staff who routinely manipulate isolates for which an effective vaccine exists, as part of the worker health programme."
+        - "A documented exposure response pathway with named contacts and a defined prophylaxis window, rehearsed rather than filed."
+        - "Competency assessment on cabinet technique, not only on cabinet awareness."
+    iso35001_clauses: ["6.1.1", "6.1.2", "6.1.3", "7.1.1", "7.2", "7.3.1", "8.1", "8.3", "8.6", "8.7", "8.9", "10.2"]
