@@ -1,0 +1,83 @@
+\section{Scope and method}
+
+\subsection{What counts as a step}
+
+A step in this inventory is a bounded physical operation on a specimen,
+performed by one worker or one instrument, with a defined beginning and end.
+The boundary matters more than the name. ``Centrifugation'' is not a useful
+unit of assessment unless it is stated whether loading, balancing, running, and
+opening the rotor are inside or outside it, because the release opportunities
+are concentrated at the ends rather than in the middle.
+
+Every step in the inventory therefore carries an explicit \textit{boundary in}
+and \textit{boundary out}. Seven steps were selected on three criteria: they
+occur in most non-waived diagnostic laboratories; they involve physical
+manipulation of a specimen or a culture; and they are plausibly capable of
+generating a respirable aerosol. Phlebotomy, courier transport, result
+reporting and instrument manufacture fall outside. Research procedures,
+high-containment work, and veterinary and food testing fall outside.
+
+\subsection{Source identification}
+
+Sources were required to be openly accessible without payment, so that a
+laboratory can check any claim in this brief at no cost. Three classes were
+sought: quantitative aerosol measurement during a laboratory procedure;
+epidemiological or incident investigation linking a procedure to laboratory
+acquired infection; and authoritative guidance.
+
+The search was targeted rather than systematic. No registered search strategy
+was followed, no screening log was kept, and no claim of completeness is made.
+This is a material limitation and is restated in Section~\ref{sec:limits}.
+Fifteen sources were retained, each recorded with its URL, access date and
+retrieval fingerprint in the project provenance log.
+
+One identified claim was excluded. A report that direct smear with matrix
+solution alone prevents growth of \textit{Brucella} species on a mass
+spectrometry target was located only at second hand. Because the claim bears
+directly on a control recommendation, it is held in a pending register, cited
+nowhere, and the affected control set is correspondingly more cautious than the
+full evidence may warrant.
+
+\subsection{Evidence grading}
+
+Each step carries one of five grades. The grade is reported beside any score
+and is never combined into it.
+
+\begin{itemize}
+\item[\textbf{E1}] Direct quantitative measurement of aerosol release during
+  this step, in a clinical or realistically simulated clinical setting.
+\item[\textbf{E2}] Quantitative measurement of a closely analogous step, or of
+  this step in a non-clinical setting, requiring a stated inference to transfer.
+\item[\textbf{E3}] Epidemiological or incident evidence linking the step to
+  laboratory-acquired infection or documented exposure, without aerosol
+  measurement.
+\item[\textbf{E4}] Authoritative guidance or expert consensus only.
+\item[\textbf{E5}] No evidence located.
+\end{itemize}
+
+Separating grade from score is the central design decision. A step may be
+hazardous on weak evidence, or benign on strong evidence, and a laboratory
+needs to see which it is facing. Averaging the two would destroy exactly the
+information that makes an inventory worth having, and would let a confident
+number stand in for an absent one.
+
+\subsection{Conditionality}
+
+Several steps split sharply between the operation performed as intended and the
+same operation with a named failure or technique deviation present. Where the
+evidence supports both readings, the step carries a conditionality flag:
+
+\begin{itemize}
+\item \textbf{Failure-conditional:} the routine operation releases little, and
+  essentially all the hazard sits in a breakage, leak or jam.
+\item \textbf{Technique-conditional:} release depends on how the operator
+  performs the step, and the measured result was obtained under correct
+  technique.
+\item \textbf{None:} the step is hazardous as performed correctly.
+\end{itemize}
+
+The distinction has a practical consequence. Controls aimed at a
+failure-conditional step should detect and contain failure rather than
+constrain the routine run, and a laboratory that applies cabinet-level controls
+to a routine operation while leaving its breakage response undefined has spent
+its effort in the wrong place.

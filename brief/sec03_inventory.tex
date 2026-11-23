@@ -1,0 +1,257 @@
+\section{The procedure inventory}
+\label{sec:inventory}
+
+Table~\ref{tab:inventory} sets out the seven steps. The remainder of this
+section describes each: what the step is, what in it is capable of releasing
+material, what is known, and what the evidence supports by way of control.
+
+\begin{table*}[t]
+\centering
+\caption{The procedure inventory. Release is the inherent aerosol release score
+on a 1--5 scale, before any control is credited. RBI is the residual biorisk
+index on a 1--25 scale under baseline practice, shown both at the step's
+primary agent profile and at the low-dose inhalational profile that a
+tuberculosis or \textit{Brucella} specimen presents. Conditionality records
+whether the evidence splits between the step as intended and the step with a
+named failure or technique deviation.}
+\label{tab:inventory}
+\small
+\begin{tabular}{@{}llccl cc@{}}
+\toprule
+ & \textbf{Bench step} & \textbf{Release} & \textbf{Evidence} &
+ \textbf{Conditional on} & \textbf{RBI, primary} & \textbf{RBI, inhalational} \\
+\midrule
+S01 & Specimen reception and accessioning & 3.4 & \textbf{E2} & failure    & 5.67 & 15.87 \\
+S02 & Centrifugation of primary tubes     & 3.4 & \textbf{E1} & failure    & 4.67 & 13.07 \\
+S03 & Cap removal and aliquoting          & 4.0 & \textbf{E1} & technique  & 6.33 & 17.73 \\
+S04 & Automated chemistry and haematology & 3.0 & \textbf{E5} & failure    & 3.33 & \phantom{0}9.33 \\
+S05 & Cartridge-based molecular testing   & 3.6 & \textbf{E1} & technique  & 10.27 & 10.27 \\
+S06 & MALDI-TOF identification            & 4.0 & \textbf{E3} & technique  & 17.73 & 17.73 \\
+S07 & Open-tube and open-plate culture    & 4.6 & \textbf{E3} & ---        & 19.60 & 19.60 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{S01 Specimen reception and accessioning}
+
+\textit{Boundary.} Opening transport bags and coolers, inspecting primary
+containers, triaging leaking or broken containers, decanting into racks,
+barcoding and sorting. Courier transport and outbound referral packaging are
+outside.
+
+No energy is applied deliberately at this step. The energy that matters arrives
+already in the specimen, as a container that leaked in transit or breaks on
+handling. Containment is therefore scored as mostly open rather than closed,
+because leakage in transit is a routine rather than exceptional finding, and
+because the worker leans over the container to read a label, placing the
+breathing zone directly above any release.
+
+No study has measured aerosol release during clinical specimen reception.
+The step is graded \textbf{E2} on an inference from the simulated accident
+measurements of Liu and colleagues, who recorded source intensities of roughly
+$10^{3}$ to $10^{4}$~CFU\,m$^{-3}$ for a dropped container \cite{liu2023}. The
+inference requires a stated caveat: that work used 30~mL of concentrated
+bacterial suspension in a research biosafety laboratory, not a clinical
+specimen in a receiving area, so the magnitude should not be read across
+directly. What transfers is the ordering, not the number.
+
+The step is failure-conditional, and the practical implication is that
+controls belong at the breakage mode. A designated receipt station with a
+bunded, non-porous surface and a leak-containment tray; a written trigger for
+moving any visibly leaking or damaged container into a Class~II cabinet
+unopened; rejection criteria that permit staff to refuse a container rather
+than open it; and a spill kit within reach with a documented check. Respiratory
+protection is not indicated for routine reception.
+
+\subsection{S02 Centrifugation of primary specimen tubes}
+
+\textit{Boundary.} Loading, balancing, running, and opening the lid and rotor
+for capped primary tubes of blood, urine or body fluid. Centrifugation of open
+vessels or of cultures is outside.
+
+Centrifugation applies the highest mechanical energy routinely delivered to a
+clinical specimen, and for that reason it is among the most frequently cited
+aerosol-generating procedures in laboratory guidance. The measured evidence
+does not support the fear in its usual form.
+
+Dubuis and Duchaine air-sampled and surface-swabbed during centrifugation of
+blood spiked with a model bacterium, in a working hospital biochemistry
+laboratory, and recovered no organisms \cite{dubuis2021}. Two conditions must
+travel with that result, and they are the reason the step is graded \textbf{E1}
+but flagged: the centrifugation used closed-cap tubes in a swing-bucket rotor,
+and the air sampling method had a detection limit of 4~CFU\,m$^{-3}$. A
+negative result obtained with containment in place is evidence that the
+containment works. It is not evidence that the bare operation is benign, and it
+cannot exclude release below the detection limit.
+
+The failure mode is separately attested. Ravnholdt and colleagues include
+centrifuge spills among the accident types studied, and centrifuge mishaps
+appear in the record of incidents associated with laboratory-acquired infection
+\cite{ravnholdt2025}. Liu and colleagues measured centrifugal tube rupture at
+roughly 10 to 100~CFU\,m$^{-3}$ \cite{liu2023}, which is real but, notably,
+one to three orders of magnitude \textit{below} their measurements for dropped
+containers and accidental injection. The common assumption that a centrifuge
+accident is the worst thing that can happen in a pre-analytical area is not
+supported by the only study that ranked them.
+
+Controls follow the conditionality. Sealed safety buckets or a sealed rotor,
+opened inside a Class~II cabinet whenever an inhalational hazard is plausible;
+a lid interlock; documented inspection of rotors, buckets, gaskets and
+O-rings; tube fill limits and a prohibition on spinning damaged tubes; and a
+written breakage procedure. This brief deliberately specifies no numeric wait
+interval before opening the lid, because no interval in the located evidence is
+derived from measurement of a clinical centrifuge, and a number stated here
+would acquire an authority the evidence does not support.
+
+\subsection{S03 Cap removal and aliquoting}
+
+\textit{Boundary.} Manual or automated removal of caps from evacuated primary
+tubes, pouring or pipetting into secondary vessels, and recapping. Opening
+positive blood culture bottles belongs to S07.
+
+This is the only step in the inventory whose entire purpose is to remove
+containment, and it scores accordingly on containment and on breathing-zone
+proximity: hands rise to chest or face height and the operator looks directly
+into the opening. A pressure differential is released, and the common practice
+of rolling or flicking a stopper free adds energy at the worst moment.
+
+Dubuis and Duchaine also sampled during the opening of spiked blood tubes and
+recovered nothing \cite{dubuis2021}. The step is graded \textbf{E1} on that
+result, with the same two conditions attached: the tubes were opened behind a
+plexiglass panel, and the detection limit was 4~CFU\,m$^{-3}$. The step is
+flagged technique-conditional because the measurement was obtained under
+controlled removal; a stopper pulled with a snap, or a tube still warm and
+under pressure from the centrifuge, has not been separately measured and should
+not be assumed equivalent.
+
+Controls in order of strength: closed-tube sampling wherever the analyser
+supports it, which removes the step rather than controlling it; enclosed
+automated decapping in preference to manual; manual opening of any specimen
+flagged for mycobacterial, fungal or systemic bacterial culture performed
+inside a Class~II cabinet; and a taught technique with the tube held away from
+the face and the stopper covered with absorbent gauze, twisted rather than
+pulled. A splash shield protects against splash and earns no credit against
+inhalation.
+
+\subsection{S04 Automated chemistry and haematology analysers}
+
+\textit{Boundary.} Loading racks, cap-pierce and probe sampling, on-board
+mixing and washing, body-fluid modes, clearing probe jams and short samples,
+emptying liquid waste, and daily maintenance with covers open.
+
+This is the highest-throughput step in the building. In a core laboratory it
+runs effectively continuously, and a far larger number of specimens pass
+through it than through any other step in this inventory.
+
+It is graded \textbf{E5}. No located study has measured aerosol release from a
+routine clinical chemistry or haematology analyser. The review by Ravnholdt and
+colleagues states the gap directly, identifying highly automated laboratory
+equipment as a source still requiring characterisation and noting that research
+attention has concentrated on manual procedures and on accidents
+\cite{ravnholdt2025}.
+
+Normal running and fault clearance are, in substance, two different steps
+sharing one name. In normal running the pathway is closed, with interfaces at
+the pierced septum and the waste line. Essentially everything that could put
+material into the air happens when a cover is open and a person is reaching
+inside to clear a jam or perform maintenance. The step is therefore
+failure-conditional, and a written jam and short-sample procedure that treats
+cover-open work as a distinct task with its own controls is the single most
+useful administrative control available.
+
+Because no measurement exists, this brief recommends that a laboratory record
+in its own risk assessment that it is operating on precaution rather than
+evidence for this step. That record is itself an output required by a
+management-system standard, and it is more honest than citing guidance that
+does not exist.
+
+\subsection{S05 Cartridge-based molecular testing}
+
+\textit{Boundary.} Adding sample reagent to sputum or another primary specimen,
+the required incubation, transferring treated specimen into the cartridge
+chamber, closing the lid, loading the module, and disposing of the used
+cartridge.
+
+This step is treated in full in Section~\ref{sec:tb}, because its evidence is
+the strongest in the inventory and is specific to tuberculosis work. In summary:
+graded \textbf{E1} on direct measurement in which neither sample preparation
+nor automated cartridge processing produced any culturable bioaerosol, against
+16 and 325~CFU\,m$^{-3}$ measured during preparation of smears for acid-fast
+microscopy \cite{banada2010}. The closed cartridge is a strong engineering
+control that the laboratory receives without having to install anything, and
+the brief's recommendation is to protect it rather than add to it.
+
+\subsection{S06 MALDI-TOF target preparation and identification}
+
+\textit{Boundary.} Picking colonies from a plate or transferring from positive
+blood culture broth, smearing or extracting onto the target, applying matrix,
+loading the target, and cleaning and reusing target plates. The primary culture
+work that produced the colony belongs to S07.
+
+The material handled here is among the most concentrated in the laboratory:
+pure growth or enriched broth, worked close in under good lighting with the
+face over an open target. Mechanical energy is low, but containment is absent
+by design and concentration is high.
+
+The step is graded \textbf{E3}. Ackelsberg and colleagues investigated
+\textit{Brucella} exposure risk events across ten clinical laboratories in New
+York City and found this identification technology in use during several of the
+events; their recommendations included handling slow-growing organisms in a
+cabinet and withholding automated identification until biological threat agents
+have been excluded \cite{ackelsberg2020}. No measurement of aerosol release
+during target preparation has been located.
+
+The hazard sits upstream of the instrument, and the trigger that is supposed to
+divert a dangerous isolate is where the failure occurs. In three of the four
+events in which this technology featured, the initial Gram stain showed
+Gram-positive rods or cocci suggesting streptococci. A control predicated on
+the operator noticing a suspicious Gram stain would therefore have failed to
+fire: the operators did look, and were misled. The control this brief
+recommends is accordingly not a stain-based prompt but a blanket rule on
+slow-growing blood culture isolates irrespective of stain appearance, combined
+with a clinical and travel history cue, which is what the investigators
+themselves recommended.
+
+\subsection{S07 Open-tube and open-plate culture work}
+
+\textit{Boundary.} Subculture, plate streaking and spreading, colony picking,
+preparing suspensions, opening positive blood culture bottles, loop and needle
+work, flaming, slide preparation from culture, and inspecting plates.
+
+This step carries the highest release score and the highest residual biorisk in
+the inventory, and it is the only step flagged as conditional on nothing: the
+documented infections occurred during the step performed as intended, on an
+open bench. It is graded \textbf{E3}, and the incident evidence is the
+strongest in the brief.
+
+Sejvar and colleagues identified sixteen cases of probable laboratory-acquired
+meningococcal disease, of which eight were fatal; in fifteen of the sixteen
+laboratories the isolate had been manipulated outside a biological safety
+cabinet \cite{sejvar2005}. They estimated an attack rate among microbiologists
+of 13 cases per 100,000 against 0.2 per 100,000 among adults in the general
+population, an occupational rate roughly sixty-five times background, and
+concluded that exposure to droplets or aerosols during open-bench manipulation
+of invasive isolates was the most likely risk factor. The earlier MMWR
+investigation records that affected microbiologists had performed subplating
+with a loop on the open bench and had aspirated from blood culture bottles
+without a cabinet, eye protection or a mask \cite{mmwr2002}. In a later fatal
+case the investigation identified open-bench manipulation, open-bench plate
+spreading, and flaming a slide that had not fully air dried \cite{mmwr2014}.
+Across the \textit{Brucella} events, open-bench manipulation gave rise to more
+than 200 occupational exposures requiring assessment and follow-up
+\cite{ackelsberg2020}. Guidance additionally records cases arising from
+smelling bacteriological cultures \cite{bmbl6}.
+
+No aerosol measurement of routine subculture in a clinical laboratory has been
+located. The step with the best-documented human harm in the inventory has
+never had an air sampler placed beside it.
+
+Cabinet use is accordingly the single highest-value control in this inventory
+and the one carried by its strongest evidence: a certified Class~II cabinet for
+all manipulation of sterile-site isolates and of any organism not yet ruled
+out, with field certification on a defined schedule and recertification after
+relocation. Disposable loops and a closed electric incinerator remove the need
+to flame wet material. A standing prohibition on smelling plates should be
+written down rather than assumed, and slides should be fully air dried before
+heat is applied. Immunisation should be offered and recorded where an effective
+vaccine exists for organisms staff routinely manipulate.

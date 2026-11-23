@@ -48,6 +48,8 @@ python3 code/05_report.py          # technical report and manuscript, built from
 python3 code/06_agreement.py --selftest   # check the agreement arithmetic
 python3 code/07_publish_gate.py    # refuses while any draft marker remains
 python3 code/08_pdf.py             # typeset PDF of the technical report (needs pandoc)
+python3 code/09_preprint_figures.py && python3 code/10_preprint.py   # instrument paper
+python3 code/11_brief_figures.py   && python3 code/12_brief.py       # evidence brief
 python3 code/09_preprint_figures.py # preprint figures, seaborn style
 python3 code/10_preprint.py        # compile the preprint PDF (needs pdflatex)
 ```
